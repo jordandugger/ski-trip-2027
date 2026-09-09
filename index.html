@@ -122,543 +122,137 @@ ul.plain li{margin:5px 0}
 footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-3)}
 @media (prefers-reduced-motion: no-preference){.prop{transition:box-shadow .2s}}
 </style>
+<style>
+.matrix td.num{font-weight:600}
+.matrix .est{color:var(--warn);font-weight:400;font-size:12px}
+.grp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+@media(max-width:700px){.grp{grid-template-columns:1fr}}
+.grp .col{background:var(--surface);border:1px solid var(--line);padding:14px 18px;font-size:15px}
+.grp .col h3{font-size:17px;margin-bottom:8px}
+.grp ul{margin:0;padding-left:18px}
+.grp li{margin:4px 0}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.kpi div{background:var(--surface);border:1px solid var(--line);padding:12px 14px}
+.kpi .k{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.kpi .v{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:22px;margin-top:3px}
+.kpi .d{font-size:13px;color:var(--ink-2)}
+</style>
 </head>
 <body>
-
-
 <div class="wrap">
 <header>
-  <div class="eyebrow">Group ski trip, January 2027</div>
+  <div class="eyebrow">Group ski trip, January 2027. Updated September 9, 2026</div>
   <h1>Erin's Birthday Ski Trip Lodging</h1>
-  <p class="lede">Deep lodging research for 16 guests (7 couples, Mom and the nanny, four young kids) split across Snowbird, Utah and Vail, Colorado, centered on January 10. Every price below was pulled live from the booking site on September 4, 2026 for the exact dates shown. Nothing was booked, no hosts were messaged.</p>
-  <div class="meta">
-    <span>Researched Sept 4, 2026</span><span>Window checked: Jan 5 to Jan 15, 2027</span><span>Primary dates: Thu Jan 7 to Fri Jan 15 (8 nights, 7 ski days)</span><span>All prices USD</span>
-  </div>
+  <p class="lede">Vail is the destination. This version re-runs every Vail option against the actual invite list for 7, 8 and 9 day trips, with prices pulled live on September 9 for each length. The Snowbird research from September 4 is preserved in this page's version history.</p>
   <nav class="toc">
-    <a href="#verdict">Verdict</a><a href="#dates">Dates</a><a href="#snowbird">Snowbird top 5</a><a href="#vail">Vail top 5</a><a href="#table">Master table</a><a href="#eliminated">Eliminated</a><a href="#compare">Snowbird vs Vail</a><a href="#links">All links</a>
+    <a href="#group">The group</a><a href="#length">Trip length</a><a href="#matrix">Price matrix</a><a href="#pick">Recommendation</a><a href="#options">All Vail options</a><a href="#next">Next steps</a>
   </nav>
 </header>
 
-<section id="verdict">
-<h2>The short version</h2>
-<p>The single most important finding: <b>there is no 7 to 9 bedroom luxury home with true ski-in/ski-out to Snowbird.</b> The big canyon homes are all at the Alta end (walk to Alta lifts, shuttle to Snowbird), and the Snowbird-side ski-in/out inventory is townhome clusters on Blackjack Road. Vail has more of what you asked for, and the standout is a gated, ski-in/ski-out complex at Golden Peak where two or three large units sit in the same building, next door to the kids' ski school.</p>
-<div class="verdicts">
-  <div class="verdict"><div class="k">Best overall</div><div class="v">Northwoods, Vail (two units)</div><div class="d">11 bedrooms, ski-in/out at Riva Bahn, pool, hot tub, steam, sauna. $62,400 for 8 nights.</div></div>
-  <div class="verdict"><div class="k">Best Vail</div><div class="v">Northwoods, then 184 W Meadow Dr</div><div class="d">184 W Meadow is the best single house: 7 ensuite bedrooms, new build, $64,474.</div></div>
-  <div class="verdict"><div class="k">Best Snowbird</div><div class="v">Village at Sugarplum #6 + #15</div><div class="d">8 bedrooms across two neighboring townhomes, true ski-in/out, two hot tubs, $37,225.</div></div>
-  <div class="verdict"><div class="k">Best true ski-in/ski-out</div><div class="v">Northwoods (Vail) / Sugarplum (Snowbird)</div><div class="d">Both are click-in-from-the-door. Everything else on the list is walk-to-lift.</div></div>
-  <div class="verdict"><div class="k">Best luxury</div><div class="v">Four Seasons Vail residences</div><div class="d">4BR + 3BR, $177,211. Attainable luxury pick: 184 W Meadow Dr.</div></div>
-  <div class="verdict"><div class="k">Best value</div><div class="v">7BR Gore Creek House, Vail</div><div class="d">$22,482 all-in, $3,212 per couple. Vintage, not luxe, 10 minute walk to lifts.</div></div>
-  <div class="verdict"><div class="k">Best with kids</div><div class="v">Northwoods, Vail</div><div class="d">Golden Peak children's ski school is a 2 minute walk. Heated pool on site. Nanny can stay in the second unit.</div></div>
-  <div class="verdict"><div class="k">Best bedroom configuration</div><div class="v">Nicholson Chalet, Alta</div><div class="d">8 ensuite bedrooms in one house, kings convert to twins, sleeps 23. Alta-side though.</div></div>
+<section id="group">
+<h2>The group, and what it actually needs</h2>
+<div class="grp">
+  <div class="col"><h3>Confirmed (invite list from last year)</h3><ul>
+    <li>Erin and Jordan, plus Mom and the nanny, plus two kids (4 and 1)</li>
+    <li>Joe and Lauren, plus two kids (both 2)</li>
+    <li>Omar and Vanessa, plus one baby</li>
+    <li>Zach and Lacey</li>
+    <li>Megan and Matt</li>
+    <li>Leslie and Ashton</li>
+  </ul></div>
+  <div class="col"><h3>Maybe</h3><ul>
+    <li>Josh and Alyssa, plus a newborn (baby due a couple of months before the trip)</li>
+    <li>If they pass, one or two other couples may be invited in their place</li>
+  </ul></div>
 </div>
-<h4>Top 3 overall</h4>
-<p><b>1. Northwoods combo, Vail ($62,400).</b> It is the only option that clears every one of your hard requirements at once: true ski-in/out (the gate opens onto the Riva Bahn base), 11 real bedrooms so every couple gets a door and Mom and the nanny get a two-bed room, a bunk room for the kids, a 14 person dining table in the larger unit, and a heated pool, hot tub, steam room and sauna on site. It is two condos rather than one chalet, but they are in the same gated building and the kids' ski school is next door, which is exactly what makes an 8 night trip with four toddlers work. Vail Village dining is a 5 to 7 minute walk.</p>
-<p><b>2. Village at Sugarplum #6 + #15, Snowbird ($37,225).</b> The best Snowbird can do for this group, and it is a good answer: two townhomes in the same small complex on the Peruvian side, ski to WhoDunnit from the end of the road, return via Peruvian Express or the Tram. Each unit has an indoor hot tub. The trade-offs are honest ones: #15 is only 1,100 square feet, garages fit nothing bigger than a mid-size SUV, and there is no walkable village, so evenings are at home or a shuttle ride to the Cliff Lodge.</p>
-<p><b>3. 184 W Meadow Drive, Vail ($64,474).</b> If you want the one-incredible-house version, this is it: a new European-style chalet on Gore Creek across from the Four Seasons with 7 ensuite bedrooms, three steam showers, a dining table for 14, a creekside hot tub and heated patios. It is not ski-in/out (about an 8 to 10 minute walk to Gondola One), but the listing includes ski storage next to Gondola One, which removes the daily gear haul. Bedroom fit is the compromise: 3 kings, two rooms with two doubles, one double-plus-twin, and a 6 twin bunk room, so one couple or Mom and the nanny end up in a double-bed room.</p>
+<div class="kpi">
+  <div><div class="k">Adults, confirmed</div><div class="v">14</div><div class="d">12 in couples + Mom + nanny</div></div>
+  <div><div class="k">Kids, confirmed</div><div class="v">5</div><div class="d">ages 4, 2, 2, 1, and a baby</div></div>
+  <div><div class="k">Heads, confirmed</div><div class="v">19</div><div class="d">22 with Josh, Alyssa and baby</div></div>
+  <div><div class="k">Adult bedrooms needed</div><div class="v">7</div><div class="d">8 with the maybe couple; 9 to hold two spare rooms</div></div>
+</div>
+<div class="callout warn"><p><b>This does not shrink the lodging.</b> Last year's list was 7 couples plus Mom and the nanny. Dropping Josh and Alyssa takes the room count from 8 to 7, but the headcount goes up because of the babies (19 confirmed vs the 16 I searched against last week). That matters in Vail specifically: the Town of Vail caps short-term rental occupancy, and both single houses on the list (184 W Meadow Drive and the 7BR Gore Creek house) are capped at 16. Whether infants count is up to each host, so both need a message before you rely on them. The two-condo Northwoods setup sleeps 26 and has no such problem.</p>
+<p>The other shift is what the kids need. Five children aged 4 and under means cribs, pack-and-plays and a room with a monitor, not a bunk room. A bedroom next to the parents, or a two-bed room for Mom and the nanny with the 4 year old, is worth more than a six-bunk room.</p></div>
 </section>
 
-<section id="dates">
-<h2>Dates</h2>
-<p>I checked Jan 5 to 13, Jan 6 to 14 and Jan 7 to 15 on every finalist that showed a live calendar. Inventory and pricing were nearly identical across the three, so the choice comes down to travel days. All three keep you on the mountain for Erin's birthday on Sunday, January 10.</p>
+<section id="length">
+<h2>Trip length: 7, 8 or 9 days</h2>
+<p>Travel days book-end the trip, so a 9 day trip is 8 nights and 7 ski days. All three land on Erin's birthday (Sunday January 10) with the group on the mountain.</p>
 <div class="dates">
-  <div class="date rec"><div class="h">Thu Jan 7 to Fri Jan 15</div>Recommended. 8 nights, 7 ski days (Fri through Thu). Both weekend days are mid-trip for the birthday. You leave Friday morning before MLK weekend arrivals clog I-70 westbound and Little Cottonwood inbound. Every finalist below is available on these dates unless noted.</div>
-  <div class="date"><div class="h">Wed Jan 6 to Thu Jan 14</div>8 nights, 7 ski days. Slightly cheaper at the Nicholson Chalet ($55,311 vs $56,570). Sugarplum #04 and Powder Ridge 12B are still blocked, so the Snowbird combo does not improve.</div>
-  <div class="date"><div class="h">Tue Jan 5 to Wed Jan 13</div>8 nights, 7 ski days. Midweek flights are cheapest. 184 W Meadow is $3,085 more on these dates; Northwoods and the Gore Creek house are the same price. Avoids any MLK overlap entirely.</div>
+  <div class="date rec"><div class="h">9 days: Thu Jan 7 to Fri Jan 15</div>8 nights, 7 ski days. Recommended. Both weekend days are mid-trip. Depart Friday morning ahead of MLK weekend traffic. Every option below is available on these dates.</div>
+  <div class="date"><div class="h">8 days: Fri Jan 8 to Fri Jan 15</div>7 nights, 6 ski days. Arrive Friday, which puts you on I-70 with the Denver weekend crowd (build in an extra hour). Weekly discounts kick in at 7 nights on the Gore Creek house.</div>
+  <div class="date"><div class="h">7 days: Fri Jan 8 to Thu Jan 14</div>6 nights, 5 ski days. Cheapest lodging total but the worst per-night value: no weekly discounts, and the Gore Creek house actually costs more for 6 nights than for 7.</div>
 </div>
-<p class="small">Note: Canyon Services (Snowbird) enforces a 4 night minimum over MLK (Jan 15 to 18), which matters only if you extend past the 15th. Ikon Base blackout Jan 16 to 17 and Epic Local holiday blackouts do not touch this window.</p>
+<p class="small">Alternative 7 night option: Thu Jan 7 to Thu Jan 14 avoids the Friday arrival. I priced Jan 8 to 15 for consistency; nightly rates are flat across these midweek January dates so the totals will be within a few hundred dollars.</p>
 </section>
 
-<section id="snowbird">
-<h2>Snowbird: top 5</h2>
-<div class="callout"><p><b>What the inventory actually looks like.</b> I ran Airbnb and Vrbo searches bounded to Little Cottonwood Canyon, checked all 14 Canyon Services units day by day on their January 2027 calendars, checked Alta Chalets' listings, and tried Snowbird's own booking engine (it would not render, so Cliff Club and Cliff Lodge suite pricing is UNVERIFIED and needs a call to Central Reservations at 800-232-9542). Exactly one in-canyon house sleeps 16 for these dates: the Nicholson Chalet. On the Snowbird side, everything is a townhome or condo, and for the week of Jan 7 to 15 the available ski-in/out units are Sugarplum #6, #15, #18 and Palace de Pow. Superior Point, Sugarplum #04 and #07 and Powder Ridge 12B are all booked or blocked for the whole window.</p></div>
-
-<article class="prop sb" id="s1">
- <div class="prop-head">
-  <div><div class="rank">Snowbird 1 <span class="tag sb">Snowbird</span> <span class="tag ok">Verified live</span></div><h3>Village at Sugarplum #6 + #15 (two townhomes, same complex)</h3><div class="links"><a href="https://www.airbnb.com/rooms/52529666">#6 on Airbnb (Alta Chalets)</a><a href="https://www.altachalets.com/village-at-sugarplum-6/">#6 direct, Alta Chalets</a><a href="https://www.vrbo.com/3732867">#15 on Vrbo</a></div></div>
-  <div class="price"><div class="big">$37,225</div><div class="sub">Jan 7 to 15, 8 nights, all fees and taxes<br>$5,318 per couple/group, $2,327 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Price detail</div><div class="v">#6: $26,049 total on Airbnb. #15: $11,176 total on Vrbo ("all fees included", about $1,397/night). Alta Chalets direct booking is typically cheaper than Airbnb (Palace de Pow showed $16,767 + tax on Booking.com vs $24,000 on Airbnb), so call them for #6.</div></div>
-   <div class="fact"><div class="k">Bedrooms / baths</div><div class="v">8 bedrooms, 8 baths total. #6: 4BR/4BA, 2,300 sq ft, sleeps 10. #15: 4BR/4BA, 1,100 sq ft, sleeps 10.</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">True ski-in/ski-out to Snowbird. Trail starts at the end of Blackjack Rd on the Condo Bypass Trail to WhoDunnit; return via Peruvian Express or the Tram on blue markers. Snow-dependent. Free shuttle loop to Alta and Snowbird Center every ~20 min, late Dec to early April.</div></div>
-   <div class="fact"><div class="k">Location</div><div class="v">Blackjack Road between Snowbird and Alta, Peruvian side of Snowbird. About 0.5 mi to Snowbird Center. No walkable restaurants; dining is Snowbird Center (shuttle) or cook in. Groceries require a drive to Sandy or delivery (order ahead). Rental cars useful but not essential; interlodge rules apply.</div></div>
-   <div class="fact"><div class="k">Hot tub / sauna / pool</div><div class="v">Private indoor hot tub in each unit. No sauna, no pool. Cliff Spa (rooftop pool, 16+) is a paid day pass a shuttle ride away.</div></div>
-   <div class="fact"><div class="k">Parking</div><div class="v">One garage space per unit, and the garages are narrow (8'6" wide, 6'8" tall). Full size SUVs will not fit. Overflow valet at Cliff Lodge about $60/night.</div></div>
-  </div>
-  <h4>Room assignment</h4>
-  <ul class="rooms">
-   <li><b>#6 ground master, king:</b> Erin and Jordan</li>
-   <li><b>#6 ground master, queen:</b> Mom and nanny (single queen; kids in loft) <i>compromise</i></li>
-   <li><b>#6 upper, king:</b> Megan and Matt</li>
-   <li><b>#6 loft, two queens:</b> Jordan and Erin's 2 kids plus Joe and Lauren's 2 kids, or one couple plus kids</li>
-   <li><b>#15 king:</b> Josh and Alyssa</li>
-   <li><b>#15 queen:</b> Zach and Lacey</li>
-   <li><b>#15 queen:</b> Vanessa and Omar</li>
-   <li><b>#15 four twins:</b> Leslie and Ashton, or the kids' room if Joe and Lauren take a queen</li>
-  </ul>
-  <p class="small">Honest read: 7 couples need 7 real beds and there are exactly 6 kings/queens plus a two-queen loft and a four-twin room. One couple ends up in the loft or twin room, or Mom and the nanny share a queen. If you want cleaner adult rooms, swap #15 for Palace de Pow (Snowbird 3 below) and pay about $13,000 more, or add #18 as a third unit (Snowbird 4).</p>
-  <h4>Group space</h4>
-  <p>#6 is the hangout unit: open great room with fireplace, den, dining for 8 plus 4 at the bar, panoramic canyon views. #15 is small (1,100 sq ft) and works as a sleeping annex. Realistically 16 people gather in #6, snugly. Two indoor hot tubs seat 6 to 8 combined.</p>
-  <div class="procon">
-   <div><h4>Pros</h4><ul><li>The only true ski-in/out to Snowbird that fits the group</li><li>Best value of any Snowbird option, $5,318 per couple</li><li>Two hot tubs, two kitchens, privacy for families</li><li>Alta Chalets is a 10 year Superhost (4.88 over 393 reviews); #15's host is 10/10 over 23 reviews</li><li>Interlodge days become "country club" ski days since you are already on the mountain</li></ul></div>
-   <div><h4>Cons</h4><ul><li>No single great room for all 16; #15 is tight</li><li>Bedroom count works but bed types force one compromise</li><li>Ski-in/out depends on snow cover on the Condo Bypass trail</li><li>Nothing walkable; dinners out mean the shuttle to Snowbird Center</li><li>Tiny garages, 1 space each</li></ul></div>
-  </div>
-  <h4>Scores</h4>
-  <div class="scores">
-   <div class="score"><div class="lbl">Ski access <b>9</b></div><div class="bar"><i style="width:90%"></i></div></div>
-   <div class="score"><div class="lbl">House quality <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Bedroom fit <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Group space <b>6</b></div><div class="bar"><i style="width:60%"></i></div></div>
-   <div class="score"><div class="lbl">Kid logistics <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Location <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Value <b>9</b></div><div class="bar"><i style="width:90%"></i></div></div>
-  </div>
-  <div class="overall"><span class="n">8.3</span><span class="t">Overall fit. Pricing tier: Reasonable.</span></div>
- </div>
-</article>
-
-<article class="prop sb" id="s2">
- <div class="prop-head">
-  <div><div class="rank">Snowbird 2 <span class="tag sb">Snowbird</span> <span class="tag ok">Verified live</span></div><h3>Nicholson Chalet (formerly Chalet Day Johns), Alta</h3><div class="links"><a href="https://www.airbnb.com/rooms/18946191">Airbnb listing</a><a href="https://www.altachalets.com/nicholson-chalet/">Alta Chalets direct</a></div></div>
-  <div class="price"><div class="big">$55,311</div><div class="sub">Jan 6 to 14, 8 nights: 8 x $6,011 = $48,088 + $7,223 taxes<br>$7,902 per couple/group, $3,457 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Other dates checked</div><div class="v">Jan 5 to 13: $56,351. Jan 7 to 15: $56,570. All open on Airbnb. No cleaning or service fee line shown; Airbnb total is the number.</div></div>
-   <div class="fact"><div class="k">Bedrooms / baths</div><div class="v">8 bedrooms, 9 baths, every bedroom ensuite. 6,800 sq ft. Max occupancy 23.</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">Alta, not Snowbird. About a 10 minute walk to Alta's lifts, ski home from Alta. To Snowbird: UTA bus / Alta shuttle (roughly 5 to 8 minutes, runs mid Dec to early April). Snowboarders cannot ride Alta, so every ski day starts with the shuttle.</div></div>
-   <div class="fact"><div class="k">Location</div><div class="v">9921 E Peruvian Acre Rd at the Alta base. Alta's few restaurants (Snowpine, Goldminer's Daughter, Alta Lodge) are walkable. Snowbird Center dining is a shuttle away. Groceries: drive down canyon or pre-order.</div></div>
-   <div class="fact"><div class="k">Amenities</div><div class="v">Large outdoor hot tub, firepit, 5 fireplaces, formal great room plus separate entertainment room with big TV, gourmet kitchen sized for groups, ski room with boot/glove dryers, 2 washers/dryers, 2 car garage plus 1 outside space. Separate caretaker residence on the property. No TVs in bedrooms.</div></div>
-   <div class="fact"><div class="k">Reviews</div><div class="v">Only 3 Airbnb reviews (4.67); one very negative 2018 review about the caretaker and a storm. Alta Chalets as a host: 4.88 over 393 reviews. Worth asking about the caretaker arrangement.</div></div>
-  </div>
-  <h4>Room assignment</h4>
-  <ul class="rooms">
-   <li><b>BR2 king:</b> Erin and Jordan</li>
-   <li><b>BR6 queen + twin daybed w/ trundle:</b> Mom and nanny (queen + 2 twins) with the 2 kids nearby</li>
-   <li><b>BR3 king:</b> Megan and Matt</li>
-   <li><b>BR4 king:</b> Josh and Alyssa</li>
-   <li><b>BR5 king:</b> Zach and Lacey</li>
-   <li><b>BR8 queen + twin daybed w/ trundle:</b> Joe and Lauren with their 2 kids</li>
-   <li><b>BR7 king + extra twin:</b> Vanessa and Omar</li>
-   <li><b>BR1 queen + queen futon:</b> Leslie and Ashton</li>
-  </ul>
-  <p class="small">This is the cleanest bedroom map of anything I found: every couple gets a private ensuite room, Mom and the nanny get a room with a real bed plus twins, and both sets of kids can sleep in their parents' rooms or a spare. Zero compromise on sleeping.</p>
-  <h4>Group space</h4>
-  <p>Built for exactly this: a formal great room and a second entertainment room, a big dining area, and a large outdoor hot tub with firepit. 16 people spread comfortably.</p>
-  <div class="procon">
-   <div><h4>Pros</h4><ul><li>The only one-house solution in the canyon for 16</li><li>8 ensuite bedrooms, best bedroom map on the list</li><li>Real group living space, outdoor hot tub and firepit</li><li>Boot dryers, ski room, two laundries</li><li>Nanny and non-skiers can walk Alta's tiny base</li></ul></div>
-   <div><h4>Cons</h4><ul><li>Not Snowbird ski-in/out; boarders shuttle every morning</li><li>Thin review history, one alarming old review</li><li>Parking for 3 cars only</li><li>$55k is Premium for what is a large but not ultra-modern chalet</li><li>Alta is skiers-only, so the "ski home" perk excludes your boarders</li></ul></div>
-  </div>
-  <h4>Scores</h4>
-  <div class="scores">
-   <div class="score"><div class="lbl">Ski access <b>5</b></div><div class="bar"><i style="width:50%"></i></div></div>
-   <div class="score"><div class="lbl">House quality <b>8</b></div><div class="bar"><i style="width:80%"></i></div></div>
-   <div class="score"><div class="lbl">Bedroom fit <b>10</b></div><div class="bar"><i style="width:100%"></i></div></div>
-   <div class="score"><div class="lbl">Group space <b>9</b></div><div class="bar"><i style="width:90%"></i></div></div>
-   <div class="score"><div class="lbl">Kid logistics <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Location <b>6</b></div><div class="bar"><i style="width:60%"></i></div></div>
-   <div class="score"><div class="lbl">Value <b>6</b></div><div class="bar"><i style="width:60%"></i></div></div>
-  </div>
-  <div class="overall"><span class="n">7.6</span><span class="t">Overall fit. Pricing tier: Premium.</span></div>
- </div>
-</article>
-
-<article class="prop sb" id="s3">
- <div class="prop-head">
-  <div><div class="rank">Snowbird 3 <span class="tag sb">Snowbird</span> <span class="tag ok">Verified live</span></div><h3>Village at Sugarplum #6 + Palace de Pow (two townhomes, same complex)</h3><div class="links"><a href="https://www.airbnb.com/rooms/52529666">#6 on Airbnb</a><a href="https://www.airbnb.com/rooms/954983815550621405">Palace de Pow on Airbnb</a><a href="https://www.vrbo.com/2622966">Palace de Pow on Vrbo</a></div></div>
-  <div class="price"><div class="big">$50,049</div><div class="sub">Jan 7 to 15, Airbnb totals: $26,049 + $24,000<br>$7,150 per couple/group, $3,128 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Cheaper channel</div><div class="v">Palace de Pow showed $16,767 + taxes on Booking.com for the same dates (tax amount not captured, UNVERIFIED). Booking direct with Alta Chalets (801-424-2426) likely lands the pair near $40k.</div></div>
-   <div class="fact"><div class="k">Bedrooms / baths</div><div class="v">8 bedrooms, 7.5 baths. Palace de Pow: 4BR/3.5BA, 8 adults (11 with kids), radiant heated floors, steam shower, Blue Star range, 10 seat dining table, onyx island, newly renovated ski room. No hot tub in Palace de Pow.</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">Same as Snowbird 1: ski-in/out via Condo Bypass Trail, shuttle loop to Alta and Snowbird.</div></div>
-   <div class="fact"><div class="k">Why this pairing</div><div class="v">More real couple beds: Palace de Pow has three kings (one with a twin daybed for a small child) plus a bunk room, so adults are not pushed into twin rooms.</div></div>
-  </div>
-  <h4>Room assignment</h4>
-  <ul class="rooms">
-   <li><b>PdP BR1 king + twin daybed, ensuite:</b> Erin and Jordan (+1 small child)</li>
-   <li><b>PdP BR2 king:</b> Megan and Matt</li>
-   <li><b>PdP BR3 king (slanted ceiling):</b> Josh and Alyssa</li>
-   <li><b>PdP bunk room (2 usable twins):</b> 2 kids</li>
-   <li><b>#6 ground king:</b> Zach and Lacey</li>
-   <li><b>#6 ground queen:</b> Joe and Lauren</li>
-   <li><b>#6 upper king:</b> Vanessa and Omar</li>
-   <li><b>#6 loft, two queens:</b> Mom and nanny (two real beds) with the other 2 kids, or Leslie and Ashton</li>
-  </ul>
-  <p class="small">Compromise: 7 couples plus Mom and nanny is 8 groups, and this pairing has 7 king/queen rooms plus a two-queen loft. Either Leslie and Ashton share the open loft (no door) with Mom and the nanny elsewhere, or someone takes the loft. Palace de Pow's bunk room top bunks are not usable, so only 2 kid beds there.</p>
-  <div class="procon">
-   <div><h4>Pros</h4><ul><li>Same true ski-in/out as Snowbird 1</li><li>Palace de Pow is the most luxurious finish on Blackjack Road (heated floors, steam, designer kitchen, 10 seat table)</li><li>Three kings instead of twin rooms</li><li>Two full kitchens and dining rooms</li></ul></div>
-   <div><h4>Cons</h4><ul><li>Only one hot tub between the two units (in #6)</li><li>Open loft has no door</li><li>Airbnb pricing is $13k above the #6 + #15 pairing; direct booking narrows it</li><li>Same no-village, tiny-garage caveats</li></ul></div>
-  </div>
-  <h4>Scores</h4>
-  <div class="scores">
-   <div class="score"><div class="lbl">Ski access <b>9</b></div><div class="bar"><i style="width:90%"></i></div></div>
-   <div class="score"><div class="lbl">House quality <b>8</b></div><div class="bar"><i style="width:80%"></i></div></div>
-   <div class="score"><div class="lbl">Bedroom fit <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Group space <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Kid logistics <b>6</b></div><div class="bar"><i style="width:60%"></i></div></div>
-   <div class="score"><div class="lbl">Location <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Value <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-  </div>
-  <div class="overall"><span class="n">7.4</span><span class="t">Overall fit. Pricing tier: Premium on Airbnb, Reasonable if booked direct.</span></div>
- </div>
-</article>
-
-<article class="prop sb" id="s4">
- <div class="prop-head">
-  <div><div class="rank">Snowbird 4 <span class="tag sb">Snowbird</span> <span class="tag uv">Partly unverified</span></div><h3>Sugarplum trio: #6 + #15 + #18 (three townhomes, same complex)</h3><div class="links"><a href="https://canyonservices.com/vrp/unit/The_Village_at_Sugarplum_Unit_18-92-15">#18 at Canyon Services</a></div></div>
-  <div class="price"><div class="big">~$48,400+</div><div class="sub">$37,225 (#6 + #15) + #18 at $11,210 base nightly sum, taxes/fees UNVERIFIED<br>~$6,900 per couple/group, ~$3,025 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">#18 detail</div><div class="v">3BR/3BA, sleeps 8, managed by Canyon Services (888-546-5707). Calendar shows Jan 7 to 15 open at $1,342 to $1,579 per night. Their quote form rejected the dates in my browser, so treat the total as an estimate. Bed configuration not captured, UNVERIFIED. Canyon Services terms: 10% deposit, balance 30 days out, $35 damage waiver, age 25+.</div></div>
-   <div class="fact"><div class="k">Why add it</div><div class="v">11 bedrooms and roughly 28 beds for 16 people means every couple gets a proper room, Mom and the nanny get their own unit with the kids, and the kids' unit can be the quiet one. This is the "everyone has a door" Snowbird answer for about $11k more than Snowbird 1.</div></div>
-   <div class="fact"><div class="k">Ski access / location</div><div class="v">Identical to Snowbird 1.</div></div>
-  </div>
-  <div class="procon">
-   <div><h4>Pros</h4><ul><li>Real bedrooms for all 8 adult groups, plus a nanny-and-kids unit</li><li>Three kitchens, two hot tubs (#6 and #15)</li><li>Still under $50k</li></ul></div>
-   <div><h4>Cons</h4><ul><li>Three separate front doors; the group splits at night</li><li>Three managers, three contracts</li><li>#18 pricing and beds need a phone call to confirm</li></ul></div>
-  </div>
-  <div class="overall"><span class="n">7.5</span><span class="t">Overall fit (contingent on #18 confirmation). Pricing tier: Reasonable.</span></div>
- </div>
-</article>
-
-<article class="prop sb" id="s5">
- <div class="prop-head">
-  <div><div class="rank">Snowbird 5 <span class="tag sb">Snowbird</span> <span class="tag ok">Verified live</span></div><h3>AltaBird Chalet + one overflow room (compromise option)</h3><div class="links"><a href="https://www.vrbo.com/4260829ha">AltaBird Chalet on Vrbo</a><a href="https://www.booking.com/hotel/us/clifflodgeandspa.html">Cliff Lodge on Booking.com</a></div></div>
-  <div class="price"><div class="big">$22,470</div><div class="sub">Jan 6 to 14, 8 nights, all fees included (sleeps 14). Add a Cliff Lodge queen room, $7,245 incl. tax, to reach 16: $29,715<br>$4,245 per couple/group, $1,857 per guest (with overflow room)</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Bedrooms / baths</div><div class="v">6 bedrooms, 6 baths, each ensuite. Blue (queen + double futon), Green (queen), Master (queen), Rose (queen + twin), Safari (queen), bunk room (4 twins). Max 14, hard cap.</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">Perched between Alta and Snowbird. Listing claims ski-in/out; in practice 5 minute walk to Alta, 18 minute walk or a short shuttle to Snowbird. Treat as shuttle-to-Snowbird.</div></div>
-   <div class="fact"><div class="k">Amenities</div><div class="v">Hot tub (2023), two gas fireplaces, radiant floors, boot dryer, 2 car garage with tuning bench, downstairs den for kids, renovated kitchen. 10/10 over 66 reviews, Premier Host, on-site manager.</div></div>
-  </div>
-  <p class="small">Why it is here: it is the best-reviewed big house in the canyon and the cheapest, but it sleeps 14, has no kings, and is Alta-side. It only works if one couple is fine in a hotel room at the Cliff Lodge or two guests drop. I would not choose it for this group, but you asked for honest candidates, and it is the strongest fallback if the Sugarplum units get booked.</p>
-  <div class="overall"><span class="n">6.3</span><span class="t">Overall fit. Pricing tier: Great Value.</span></div>
- </div>
-</article>
-
-<h4>Also verified, not shortlisted</h4>
-<ul class="plain elim">
-  <li><b>The Fort House, Alta</b> (Alta Chalets, <a href="https://www.vrbo.com/1920609">Vrbo</a>): 6BR/6BA, sleeps 14, $39,132 all-in Jan 6 to 14. Great house, two short, Alta-side, and $17k more than AltaBird for the same capacity.</li>
-  <li><b>Cliff Lodge</b> (<a href="https://www.booking.com/hotel/us/clifflodgeandspa.html">Booking.com</a>): standard two-queen rooms at $7,245 each incl. tax for Jan 7 to 15; eight rooms is about $58k for hotel rooms with a kids' pool, childcare and the Tram at the door. Suites and Cliff Club condos were not bookable online; call 800-232-9542.</li>
-  <li><b>Cliff Club 2BR</b> (<a href="https://www.vrbo.com/621791">Vrbo owner listing</a>): unavailable Jan 7 to 15, and the units are 2 kings plus sofa beds, weak for adults.</li>
-  <li><b>Powder Ridge #11B</b> (Canyon Services): open Jan 7 to 14 only, Alta-side, 3BR + loft.</li>
-</ul>
-</section>
-
-<section id="vail">
-<h2>Vail: top 5</h2>
-<div class="callout vail"><p><b>What the inventory actually looks like.</b> Airbnb and Vrbo bounded to Vail Village, Lionshead, Golden Peak and Forest Road for 16 guests, plus live Booking.com inventory for the Arrabelle, Four Seasons, Manor Vail and Ritz-Carlton Residences, plus Vail Resorts' own engine for the Chalets at the Lodge at Vail. Vail has genuinely more choice: three large ski-in/out units at Northwoods, a new 7 bedroom chalet on Meadow Drive, hotel-serviced residences at the Arrabelle and Four Seasons, and a value 7 bedroom house. The famous names that did not pan out for these dates: Golden Peak Penthouse (booked), 493 Beaver Dam (booked), Chalets at the Lodge at Vail (no availability shown), Ritz 4BR (bunk-heavy).</p></div>
-
-<article class="prop vail" id="v1">
- <div class="prop-head">
-  <div><div class="rank">Vail 1 <span class="tag vail">Vail</span> <span class="tag ok">Verified live</span></div><h3>Northwoods at Golden Peak: 6BR Chalet + Juniper 311A (two units, one gated complex)</h3><div class="links"><a href="https://www.vrbo.com/3771159">6BR Chalet on Vrbo</a><a href="https://www.vrbo.com/1637462">Juniper 311A (5BR) on Vrbo</a><a href="https://www.vrbo.com/3713821">Juniper 311 (6BR) on Vrbo, alternate</a><a href="https://vailrealty.com/property/northwoods/">Vail Realty complex page</a></div></div>
-  <div class="price"><div class="big">$62,400</div><div class="sub">Jan 7 to 15: $31,326 + $31,074 (Vrbo totals). Same price Jan 5 to 13.<br>$8,914 per couple/group, $3,900 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Tax caveat</div><div class="v">Both Vail Realty listings say "Property Manager will send a separate invoice for Room and Tax." Vrbo shows the total above as the booking price, but confirm whether Vail's ~10.8% lodging tax is inside it. If not, add roughly $6,700. Cleaning fee waived on 6+ nights. 50% due within 24 hours of booking; non-refundable inside 60 days.</div></div>
-   <div class="fact"><div class="k">Bedrooms / baths</div><div class="v">11 bedrooms, 10 baths. Chalet: 6BR/6BA, sleeps 14, all ensuite, multi-level. Juniper 311A: 5BR/4BA penthouse, 2,450 sq ft, sleeps 12. Alternate: Juniper 311, 6BR/6BA, 2,688 sq ft, sleeps 12, $31,163.</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">True ski-in/ski-out. Northwoods is the gated complex directly beside the Golden Peak base; Riva Bahn Express (Chair 6) is right outside. Ski down to Golden Peak at the end of the day. Gondola One is about a 6 to 8 minute walk through the village.</div></div>
-   <div class="fact"><div class="k">Location</div><div class="v">East end of Vail Village on Gore Creek, next to the Ford Amphitheater. Vail Village restaurants and shops: 5 to 7 minute walk. The free in-town bus runs every 5 to 10 minutes. Groceries: City Market in West Vail (drive or bus) or Instacart. No rental cars needed; taxis/shuttles from DEN or EGE.</div></div>
-   <div class="fact"><div class="k">Hot tub / sauna / pool</div><div class="v">Shared complex amenities: heated outdoor pool (seasonal, confirm winter), hot tub, steam room, sauna, gym. No private hot tub in-unit.</div></div>
-   <div class="fact"><div class="k">Kids</div><div class="v">Golden Peak children's ski school is a 2 minute walk (both listings say so). Small World Play School nursery (ages 2 months to 6) is at Golden Peak; confirm 2026-27 operation. Bunk rooms in both units. Nanny and Mom can hold one unit as the kids' base while the others ski.</div></div>
-   <div class="fact"><div class="k">Parking</div><div class="v">One free garage space per unit. No air conditioning (irrelevant in January).</div></div>
-  </div>
-  <h4>Room assignment</h4>
-  <ul class="rooms">
-   <li><b>Chalet upper king (mountain view, tub):</b> Erin and Jordan</li>
-   <li><b>Chalet ground king, ensuite:</b> Megan and Matt</li>
-   <li><b>Chalet TV room w/ king bed:</b> Josh and Alyssa (or kids' movie room)</li>
-   <li><b>Chalet 2 twins made to king, balcony:</b> Zach and Lacey</li>
-   <li><b>Chalet 2 twins made to king, balcony:</b> Vanessa and Omar</li>
-   <li><b>Chalet top floor bunk room (4 twins, 2 baths, balcony):</b> all 4 kids</li>
-   <li><b>311A master king:</b> Leslie and Ashton</li>
-   <li><b>311A two doubles:</b> Mom and nanny (two real beds)</li>
-   <li><b>311A two doubles:</b> Joe and Lauren</li>
-   <li><b>311A two doubles:</b> spare / nanny's own room</li>
-   <li><b>311A twin bunks:</b> spare kids' room</li>
-  </ul>
-  <p class="small">Every adult group gets a door and a real bed. The only soft spot is that 311A's guest rooms have two doubles rather than a king; Joe and Lauren could take a Chalet king instead and put the kids' room in 311A. If you prefer Juniper 311 (6BR) over 311A it adds two more kings and costs $89 more.</p>
-  <h4>Group space</h4>
-  <p>The Chalet is the gathering unit: open kitchen and living room with a 14 person dining table and a terrace with a grill looking at Golden Peak. That is exactly the evening room you described. 311A has its own living/dining area for the kids' bedtime shift. The pool, hot tub, steam and sauna are downstairs for everyone.</p>
-  <div class="procon">
-   <div><h4>Pros</h4><ul><li>Only option that is true ski-in/out AND has 11 real bedrooms AND is a 5 minute walk from 75+ restaurants</li><li>Kids' ski school and nursery next door</li><li>14 person dining table, pool, hot tub, steam, sauna</li><li>Same gated building, one management company (Vail Realty)</li><li>Available on all three date windows</li></ul></div>
-   <div><h4>Cons</h4><ul><li>Two condos, not one chalet; the group splits at bedtime</li><li>Interiors are "very nice condo," not architectural showpiece</li><li>Hot tub is shared with the complex</li><li>Tax possibly billed separately; confirm</li><li>Non-refundable inside 60 days</li></ul></div>
-  </div>
-  <h4>Scores</h4>
-  <div class="scores">
-   <div class="score"><div class="lbl">Ski access <b>10</b></div><div class="bar"><i style="width:100%"></i></div></div>
-   <div class="score"><div class="lbl">House quality <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Bedroom fit <b>9</b></div><div class="bar"><i style="width:90%"></i></div></div>
-   <div class="score"><div class="lbl">Group space <b>8</b></div><div class="bar"><i style="width:80%"></i></div></div>
-   <div class="score"><div class="lbl">Kid logistics <b>10</b></div><div class="bar"><i style="width:100%"></i></div></div>
-   <div class="score"><div class="lbl">Location <b>9</b></div><div class="bar"><i style="width:90%"></i></div></div>
-   <div class="score"><div class="lbl">Value <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-  </div>
-  <div class="overall"><span class="n">8.6</span><span class="t">Overall fit. Pricing tier: Premium.</span></div>
- </div>
-</article>
-
-<article class="prop vail" id="v2">
- <div class="prop-head">
-  <div><div class="rank">Vail 2 <span class="tag vail">Vail</span> <span class="tag ok">Verified live</span></div><h3>184 W Meadow Drive, European Chalet on Gore Creek</h3><div class="links"><a href="https://www.vrbo.com/1829358">Vrbo listing ($64,474)</a><a href="https://www.airbnb.com/rooms/1167500304241964200">Airbnb listing ($71,662)</a><a href="https://www.rentalsinvail.com/">Rentals in Vail direct, 970-401-8570</a></div></div>
-  <div class="price"><div class="big">$64,474</div><div class="sub">Jan 7 to 15 on Vrbo. Jan 5 to 13: $67,559. Airbnb same dates: $71,662.<br>$9,211 per couple/group, $4,030 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Bedrooms / baths</div><div class="v">7 bedrooms, 7.5 baths, every bedroom ensuite. Sleeps 16 (Town of Vail cap). Brand new build; 10/10 on Vrbo, 5.0 on Airbnb (few reviews yet).</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">Walk-to-lift, not ski-in/out. On W Meadow Drive across from the Four Seasons; Gondola One is roughly 0.5 mi, an 8 to 10 minute walk, or 2 minutes on the in-town bus. The listing includes ski storage next to Gondola One, so you walk over in boots and your skis are waiting.</div></div>
-   <div class="fact"><div class="k">Location</div><div class="v">Vail Village edge, creekside. Restaurants on Meadow Drive and Bridge Street within 5 to 10 minutes on foot. Mayors' Park 3 minutes away for the kids. Groceries: West Vail by bus/car or delivery. No rental cars needed.</div></div>
-   <div class="fact"><div class="k">Amenities</div><div class="v">Private hot tub on a creekside patio, heated patios, balconies and driveway, three steam showers, two laundry rooms, Wolf and Sub-Zero kitchen, dining table for 14 plus 6 counter stools, in-floor radiant heat, crib and changing table, security cameras outside. Dog-friendly with approval.</div></div>
-  </div>
-  <h4>Room assignment</h4>
-  <ul class="rooms">
-   <li><b>Main level master, king:</b> Erin and Jordan</li>
-   <li><b>Floor 2 master, king:</b> Megan and Matt</li>
-   <li><b>Level 2 king south:</b> Josh and Alyssa</li>
-   <li><b>Floor 2 NE, two doubles:</b> Mom and nanny (two real beds)</li>
-   <li><b>Floor 2 NW, two doubles:</b> Zach and Lacey <i>compromise: doubles</i></li>
-   <li><b>Basement double + twin:</b> Joe and Lauren + 1 child <i>compromise</i></li>
-   <li><b>Basement bunk room, 6 twins:</b> remaining 3 kids, or Vanessa and Omar / Leslie and Ashton</li>
-  </ul>
-  <p class="small">The honest problem: 7 bedrooms for 8 adult groups. Two couples end up in double-bed rooms and one couple has no room at all unless they take the bunk room. This is a superb house for 5 or 6 couples plus kids; for 7 couples it needs a conversation about who takes the bunk room, or one couple stays at a nearby hotel.</p>
-  <div class="procon">
-   <div><h4>Pros</h4><ul><li>The single most impressive house on either list: new, architectural, all ensuite</li><li>Table for 14, private creekside hot tub, heated everything</li><li>Ski storage at Gondola One removes the gear haul</li><li>Walk to the whole village</li><li>Cheaper on Vrbo than Airbnb by $7k; direct may be cheaper still</li></ul></div>
-   <div><h4>Cons</h4><ul><li>Not ski-in/out</li><li>Only 6 real couple rooms for 7 couples plus Mom/nanny</li><li>Two of the couple rooms are two doubles</li><li>Nearly new, so little review history</li></ul></div>
-  </div>
-  <h4>Scores</h4>
-  <div class="scores">
-   <div class="score"><div class="lbl">Ski access <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">House quality <b>10</b></div><div class="bar"><i style="width:100%"></i></div></div>
-   <div class="score"><div class="lbl">Bedroom fit <b>6</b></div><div class="bar"><i style="width:60%"></i></div></div>
-   <div class="score"><div class="lbl">Group space <b>10</b></div><div class="bar"><i style="width:100%"></i></div></div>
-   <div class="score"><div class="lbl">Kid logistics <b>8</b></div><div class="bar"><i style="width:80%"></i></div></div>
-   <div class="score"><div class="lbl">Location <b>9</b></div><div class="bar"><i style="width:90%"></i></div></div>
-   <div class="score"><div class="lbl">Value <b>6</b></div><div class="bar"><i style="width:60%"></i></div></div>
-  </div>
-  <div class="overall"><span class="n">8.2</span><span class="t">Overall fit. Pricing tier: Premium.</span></div>
- </div>
-</article>
-
-<article class="prop vail" id="v3">
- <div class="prop-head">
-  <div><div class="rank">Vail 3 <span class="tag vail">Vail</span> <span class="tag ok">Verified live</span></div><h3>The Arrabelle at Vail Square, Lionshead: two 3BR + one 2BR apartments</h3><div class="links"><a href="https://www.booking.com/hotel/us/the-arrabelle-at-vail-square.html">Arrabelle on Booking.com</a><a href="https://www.gondolaresorts.com/vacation-rentals-homes.asp?cat=18050">Owner units via Gondola Resorts</a></div></div>
-  <div class="price"><div class="big">$58,212</div><div class="sub">Jan 7 to 15 incl. taxes and fees at 30% off: 3BR $19,733 + 3BR $20,885 + 2BR $17,594<br>$8,316 per couple/group, $3,638 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Price detail</div><div class="v">Three-Bedroom Apartment (king + 2 queens, max 7, 192 m2): $16,117 + $3,616 tax, 7 left. Three-Bedroom with twins (2 twins + king + 2 queens, max 6, 239 m2): $17,058 + $3,827. Premier Two-Bedroom (2 queens, max 4): $14,370 + $3,224. Free cancellation to Dec 8, pay nothing until Dec 6. The 30% discount is an early-booking rate and may not last.</div></div>
-   <div class="fact"><div class="k">Bedrooms / baths</div><div class="v">8 bedrooms across three apartments, sleeps 17 nominal. Each apartment has a full kitchen, living room and balcony. Units are hotel inventory, so same-floor placement is a request, not a guarantee.</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">Effectively ski-in/out. The Eagle Bahn Gondola is directly outside on Vail Square, with a covered escalator down to the base and a ski valet. You never carry gear.</div></div>
-   <div class="fact"><div class="k">Location</div><div class="v">Heart of Lionshead. Restaurants on the square (Tavern on the Square, Blue Moose, Bart & Yeti's) are steps away; the Arrabelle ice rink is on the plaza. Vail Village is a 10 minute walk or a 3 minute bus ride. Full hotel services: valet, concierge, daily housekeeping.</div></div>
-   <div class="fact"><div class="k">Hot tub / sauna / pool</div><div class="v">Rooftop lap pool and hot tubs, 10,000 sq ft RockResorts spa with steam and sauna, fitness center. No private hot tubs.</div></div>
-   <div class="fact"><div class="k">Kids</div><div class="v">Lionshead children's ski school is next door. Kid-friendly pool. Hotel means no shared kitchen big enough for 16, so dinners are restaurant nights or one apartment hosting.</div></div>
-  </div>
-  <h4>Room assignment</h4>
-  <ul class="rooms">
-   <li><b>3BR-A king:</b> Erin and Jordan</li>
-   <li><b>3BR-A queen:</b> Megan and Matt</li>
-   <li><b>3BR-A queen:</b> Josh and Alyssa</li>
-   <li><b>3BR-B king:</b> Zach and Lacey</li>
-   <li><b>3BR-B queen:</b> Joe and Lauren</li>
-   <li><b>3BR-B queen + 2 twins alcove:</b> Mom and nanny + 2 kids</li>
-   <li><b>2BR queen:</b> Vanessa and Omar</li>
-   <li><b>2BR queen:</b> Leslie and Ashton</li>
-   <li><b>Sofa beds in living rooms:</b> 2 remaining kids</li>
-  </ul>
-  <p class="small">Eight real bedrooms for eight adult groups, which very few options manage. Two of the four kids sleep on sofa beds or in their parents' room. Occupancy caps (7 / 6 / 4 = 17) are enforced by the hotel.</p>
-  <div class="procon">
-   <div><h4>Pros</h4><ul><li>Gondola outside the door, ski valet, no gear hauling</li><li>Eight real bedrooms, all adults have privacy</li><li>Rooftop pool, hot tubs and a real spa</li><li>Full hotel service: housekeeping, concierge, valet</li><li>Free cancellation until Dec 8 with nothing due until then</li></ul></div>
-   <div><h4>Cons</h4><ul><li>Three separate apartments with hotel-sized living rooms; no 16 person hangout space</li><li>Units may not be adjacent</li><li>Queens, not kings, in most rooms</li><li>Resort feel rather than "our house" feel</li></ul></div>
-  </div>
-  <h4>Scores</h4>
-  <div class="scores">
-   <div class="score"><div class="lbl">Ski access <b>10</b></div><div class="bar"><i style="width:100%"></i></div></div>
-   <div class="score"><div class="lbl">House quality <b>8</b></div><div class="bar"><i style="width:80%"></i></div></div>
-   <div class="score"><div class="lbl">Bedroom fit <b>8</b></div><div class="bar"><i style="width:80%"></i></div></div>
-   <div class="score"><div class="lbl">Group space <b>5</b></div><div class="bar"><i style="width:50%"></i></div></div>
-   <div class="score"><div class="lbl">Kid logistics <b>9</b></div><div class="bar"><i style="width:90%"></i></div></div>
-   <div class="score"><div class="lbl">Location <b>10</b></div><div class="bar"><i style="width:100%"></i></div></div>
-   <div class="score"><div class="lbl">Value <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-  </div>
-  <div class="overall"><span class="n">8.0</span><span class="t">Overall fit. Pricing tier: Premium.</span></div>
- </div>
-</article>
-
-<article class="prop vail" id="v4">
- <div class="prop-head">
-  <div><div class="rank">Vail 4 <span class="tag vail">Vail</span> <span class="tag ok">Verified live</span></div><h3>Entire 7BR House on Gore Creek, W Meadow Drive (value pick)</h3><div class="links"><a href="https://www.vrbo.com/618006">Vrbo listing ($22,482)</a><a href="https://www.airbnb.com/rooms/37243769">Airbnb listing ($28,363)</a></div></div>
-  <div class="price"><div class="big">$22,482</div><div class="sub">Jan 7 to 15 or Jan 5 to 13, all fees included, on Vrbo<br>$3,212 per couple/group, $1,405 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Bedrooms / baths</div><div class="v">7 bedrooms, 5.5 baths, sleeps 16 (Town cap). A true single-family house set up as upper and lower units with two kitchens and two living rooms. Upper: king, queen, queen + twin, queen. Lower: queen, queen, bunk room (one twin bunk). Plus a twin sofa bed and air mattresses.</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">Walk or bus. Between Vail Village and Lionshead on W Meadow Drive across from Vail Health; roughly 10 to 12 minutes on foot to either gondola, free bus at the door every 5 to 10 minutes.</div></div>
-   <div class="fact"><div class="k">Amenities</div><div class="v">Private hot tub, wood-burning fireplaces, 1,000+ sq ft of creekside decks, fenced yard, mud room, off-street parking for 4, 20 year local caretaker next door who plows and shovels. Top 5% of Airbnb homes; "Guest favourite."</div></div>
-   <div class="fact"><div class="k">The catch</div><div class="v">It is a vintage Vail ski house updated "where it counts," explicitly marketed as the value play in a neighborhood of $20M rebuilds. Not luxurious. Bathrooms are shared (5.5 for 7 bedrooms).</div></div>
-  </div>
-  <h4>Room assignment</h4>
-  <ul class="rooms">
-   <li><b>Upstairs primary, king:</b> Erin and Jordan</li>
-   <li><b>Upstairs creekside, queen + twin:</b> Mom and nanny (queen + twin) <i>compromise</i></li>
-   <li><b>Upstairs bedroom, queen:</b> Megan and Matt</li>
-   <li><b>Upstairs streetside, queen:</b> Josh and Alyssa</li>
-   <li><b>Downstairs primary, queen:</b> Zach and Lacey</li>
-   <li><b>Downstairs bedroom, queen:</b> Joe and Lauren</li>
-   <li><b>Downstairs bunk room (2 twins):</b> 2 kids; other 2 kids on the twin sofa bed / air mattress</li>
-   <li><b>No room left:</b> Vanessa and Omar, Leslie and Ashton would need the living room sofa or a nearby hotel <i>major compromise</i></li>
-  </ul>
-  <p class="small">Only 6 couple-capable rooms plus a 2 bed bunk room. For 7 couples plus Mom and nanny it does not work without two couples doubling up or staying elsewhere. Included because the price is remarkable and it is the cheapest way to put most of the group in a real house in the heart of Vail.</p>
-  <div class="procon">
-   <div><h4>Pros</h4><ul><li>$22,482 all-in for a whole house in central Vail</li><li>Two living rooms, two kitchens, creekside decks, hot tub</li><li>Caretaker next door, plowing handled</li><li>Free cancellation, weekly discount already applied</li></ul></div>
-   <div><h4>Cons</h4><ul><li>Not enough real bedrooms for 8 adult groups</li><li>Dated finishes, shared baths</li><li>Walk or bus to lifts, no ski storage at the base</li><li>Across from the hospital (quiet, but not a village view)</li></ul></div>
-  </div>
-  <h4>Scores</h4>
-  <div class="scores">
-   <div class="score"><div class="lbl">Ski access <b>6</b></div><div class="bar"><i style="width:60%"></i></div></div>
-   <div class="score"><div class="lbl">House quality <b>5</b></div><div class="bar"><i style="width:50%"></i></div></div>
-   <div class="score"><div class="lbl">Bedroom fit <b>5</b></div><div class="bar"><i style="width:50%"></i></div></div>
-   <div class="score"><div class="lbl">Group space <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Kid logistics <b>7</b></div><div class="bar"><i style="width:70%"></i></div></div>
-   <div class="score"><div class="lbl">Location <b>8</b></div><div class="bar"><i style="width:80%"></i></div></div>
-   <div class="score"><div class="lbl">Value <b>10</b></div><div class="bar"><i style="width:100%"></i></div></div>
-  </div>
-  <div class="overall"><span class="n">6.9</span><span class="t">Overall fit. Pricing tier: Great Value.</span></div>
- </div>
-</article>
-
-<article class="prop vail" id="v5">
- <div class="prop-head">
-  <div><div class="rank">Vail 5 <span class="tag vail">Vail</span> <span class="tag uv">Beds unverified</span></div><h3>Manor Vail Lodge, Golden Peak: two 3BR + one 2BR condos</h3><div class="links"><a href="https://www.booking.com/hotel/us/manor-vail-lodge.html">Manor Vail on Booking.com</a><a href="https://www.manorvail.com/accommodations/">Manor Vail direct, 800-950-8245</a></div></div>
-  <div class="price"><div class="big">$65,883</div><div class="sub">Jan 7 to 15 incl. taxes: Platinum 3BR $26,625 + Diamond 3BR $28,380 + 2BR $10,878<br>$9,412 per couple/group, $4,118 per guest</div></div>
- </div>
- <div class="prop-body">
-  <div class="facts">
-   <div class="fact"><div class="k">Price detail</div><div class="v">Platinum Three Bedroom (max 8): $21,845 + $4,780 tax. Diamond Three Bedroom (max 8): $23,285 + $5,095. Two-Bedroom Apartment (max 8, listed with 2 full beds): $8,925 + $1,953. Booking.com did not show the 4BR + loft Penthouse #470 or #454; call direct. Full bed configurations UNVERIFIED beyond "Bedroom 1: queen."</div></div>
-   <div class="fact"><div class="k">Ski access</div><div class="v">Directly across the street from the Golden Peak base and the Riva Bahn lift, and from the Golden Peak Children's Ski School. Not ski-in/out, but a 2 to 3 minute walk with skis. Gondola One about 6 minutes.</div></div>
-   <div class="fact"><div class="k">Amenities</div><div class="v">Two heated outdoor pools, four hot tubs, fitness center, daily hot breakfast included, full kitchens and gas fireplaces in units, on-site restaurant. Lower-key, family-run feel than the Arrabelle.</div></div>
-  </div>
-  <p class="small">Why it made the list: it is the closest lodging in Vail to the kids' ski school and nursery, with breakfast included and four hot tubs, at about the same money as the Arrabelle. Why it is fifth: the unit interiors are pleasant rather than luxurious, the 2BR is small, three units means no shared great room, and I could not confirm bed types online. A phone call could move it up (Penthouse #470 with 4BR + loft and direct elevator would change the math).</p>
-  <div class="overall"><span class="n">7.3</span><span class="t">Overall fit. Pricing tier: Premium.</span></div>
- </div>
-</article>
-
-<h4>Ultra-luxury reference points (verified, not shortlisted)</h4>
-<ul class="plain elim">
-  <li><b>Four Seasons Resort Vail residences</b> (<a href="https://www.booking.com/hotel/us/four-seasons-resort-vail.html">Booking.com</a>): live Jan 7 to 15 rates. Blue Sky 4BR (3 kings + 2 fulls, max 10): $72,781 + $14,309 tax. Prima 3BR (2 kings + 2 fulls, max 8): $75,314 + $14,807. Together, 7 bedrooms for 18: <b>$177,211</b> ($25,316 per couple) on non-refundable rates; flexible rates run about 17% higher. Riva Ridge 6BR (max 12): $181,246 + $35,633. Walk 5 to 7 minutes to Gondola One with the hotel's ski concierge at the base. Pool, spa, twice-daily housekeeping. Ultra Luxury.</li>
-  <li><b>Ascension, Forest Road</b> (InvitedHome, <a href="https://www.airbnb.com/rooms/998666190045285505">Airbnb</a>): 8BR/8.5BA, 15,000 sq ft, funicular, heated pool, hot tub, gym, game room, ski-in/out via Simba when snow allows. Live Airbnb total Jan 7 to 15: <b>$187,793</b>. $35,000 security deposit. The one house that ticks every box, at three times the price of anything else. Ultra Luxury.</li>
-</ul>
-</section>
-
-<section id="table" class="wide">
-<h2>Master comparison</h2>
-<p class="small">Sorted by overall fit for this group, not price. Prices are live totals for the dates shown, including taxes and fees unless marked. Per couple/group = total divided by 7.</p>
-<div class="tbl"><table>
-<thead><tr><th>Rank</th><th>Destination</th><th>Property</th><th>Dates</th><th>Beds / BR</th><th>Ski access</th><th>Hot tub</th><th>Luxury level</th><th>Total stay</th><th>Per couple</th><th>Main drawback</th><th>Overall</th></tr></thead>
+<section id="matrix" class="wide">
+<h2>Price matrix, all Vail options by trip length</h2>
+<p class="small">Live Vrbo totals (all fees included) pulled September 9, 2026. Booking.com figures marked <span class="est">est.</span> are pro-rated from last week's verified 8-night rates because Booking.com could not be reached today; treat them as plus or minus 10%. Per group = total divided by 7 confirmed groups (6 couples plus Mom and the nanny). With Josh and Alyssa it divides by 8.</p>
+<div class="tbl matrix"><table>
+<thead><tr><th>Option</th><th>Bedrooms</th><th>Sleeps</th><th>Ski access</th><th>6 nights (7 day trip)</th><th>7 nights (8 day trip)</th><th>8 nights (9 day trip)</th><th>Per group, 8 nights</th><th>Fits 19 heads?</th></tr></thead>
 <tbody>
-<tr><td class="rank">1</td><td><span class="tag vail">Vail</span></td><td><a href="#v1">Northwoods 6BR Chalet + Juniper 311A</a></td><td>Jan 7 to 15</td><td>11 BR, ~26 beds, 10 BA</td><td>True ski-in/out, Riva Bahn</td><td>Shared, + pool/steam/sauna</td><td>Premium</td><td class="num">$62,400</td><td class="num">$8,914</td><td>Two condos, not one house; tax may be extra</td><td class="num">8.6</td></tr>
-<tr><td class="rank">2</td><td><span class="tag sb">Snowbird</span></td><td><a href="#s1">Sugarplum #6 + #15</a></td><td>Jan 7 to 15</td><td>8 BR, 16 beds, 8 BA</td><td>True ski-in/out, Condo Bypass</td><td>Two private indoor</td><td>Reasonable</td><td class="num">$37,225</td><td class="num">$5,318</td><td>#15 is 1,100 sq ft; one couple in twins/loft</td><td class="num">8.3</td></tr>
-<tr><td class="rank">3</td><td><span class="tag vail">Vail</span></td><td><a href="#v2">184 W Meadow Drive</a></td><td>Jan 7 to 15</td><td>7 BR, 15 beds, 7.5 BA</td><td>Walk 8 to 10 min, ski storage at Gondola One</td><td>Private, creekside</td><td>Premium</td><td class="num">$64,474</td><td class="num">$9,211</td><td>6 couple rooms for 8 adult groups</td><td class="num">8.2</td></tr>
-<tr><td class="rank">4</td><td><span class="tag vail">Vail</span></td><td><a href="#v3">Arrabelle 3BR + 3BR + 2BR</a></td><td>Jan 7 to 15</td><td>8 BR, sleeps 17, hotel</td><td>Gondola outside door, ski valet</td><td>Rooftop pool + hot tubs, spa</td><td>Premium</td><td class="num">$58,212</td><td class="num">$8,316</td><td>No 16 person living room; units may not adjoin</td><td class="num">8.0</td></tr>
-<tr><td class="rank">5</td><td><span class="tag sb">Snowbird</span></td><td><a href="#s2">Nicholson Chalet</a></td><td>Jan 6 to 14</td><td>8 BR, 19 beds, 9 BA</td><td>Walk to Alta; shuttle to Snowbird</td><td>Private outdoor + firepit</td><td>Premium</td><td class="num">$55,311</td><td class="num">$7,902</td><td>Alta-side; boarders shuttle daily</td><td class="num">7.6</td></tr>
-<tr><td class="rank">6</td><td><span class="tag sb">Snowbird</span></td><td><a href="#s4">Sugarplum trio #6 + #15 + #18</a></td><td>Jan 7 to 15</td><td>11 BR, ~28 beds</td><td>True ski-in/out</td><td>Two private indoor</td><td>Reasonable</td><td class="num">~$48,400+</td><td class="num">~$6,900</td><td>Three doors; #18 total unverified</td><td class="num">7.5</td></tr>
-<tr><td class="rank">7</td><td><span class="tag sb">Snowbird</span></td><td><a href="#s3">Sugarplum #6 + Palace de Pow</a></td><td>Jan 7 to 15</td><td>8 BR, 7.5 BA</td><td>True ski-in/out</td><td>One private indoor</td><td>Premium (Airbnb)</td><td class="num">$50,049</td><td class="num">$7,150</td><td>Open loft; only one hot tub</td><td class="num">7.4</td></tr>
-<tr><td class="rank">8</td><td><span class="tag vail">Vail</span></td><td><a href="#v5">Manor Vail 3BR + 3BR + 2BR</a></td><td>Jan 7 to 15</td><td>8 BR, hotel</td><td>Across street from Golden Peak</td><td>4 shared + 2 pools</td><td>Premium</td><td class="num">$65,883</td><td class="num">$9,412</td><td>Beds unverified; no great room</td><td class="num">7.3</td></tr>
-<tr><td class="rank">9</td><td><span class="tag vail">Vail</span></td><td>Four Seasons Blue Sky 4BR + Prima 3BR</td><td>Jan 7 to 15</td><td>7 BR, sleeps 18</td><td>Walk 5 to 7 min, ski concierge</td><td>Pool, spa</td><td>Ultra Luxury</td><td class="num">$177,211</td><td class="num">$25,316</td><td>Price; non-refundable rate</td><td class="num">7.0</td></tr>
-<tr><td class="rank">10</td><td><span class="tag vail">Vail</span></td><td><a href="#v4">7BR Gore Creek House</a></td><td>Jan 7 to 15</td><td>7 BR, 9 beds, 5.5 BA</td><td>Walk 10 to 12 min or bus</td><td>Private</td><td>Great Value</td><td class="num">$22,482</td><td class="num">$3,212</td><td>Only 6 couple rooms; dated</td><td class="num">6.9</td></tr>
-<tr><td class="rank">11</td><td><span class="tag sb">Snowbird</span></td><td><a href="#s5">AltaBird Chalet + 1 hotel room</a></td><td>Jan 6 to 14</td><td>6 BR, sleeps 14 + 2</td><td>Walk to Alta; shuttle to Snowbird</td><td>Private</td><td>Great Value</td><td class="num">$29,715</td><td class="num">$4,245</td><td>Sleeps 14; no kings; Alta-side</td><td class="num">6.3</td></tr>
+<tr><td><b>Northwoods 6BR Chalet + Juniper 311</b><br><span class="small">Golden Peak, two units, one gated building</span></td><td>12 BR / 12 BA</td><td>26</td><td>True ski-in/out, Riva Bahn</td><td class="num">$45,944</td><td class="num">$53,622</td><td class="num">$62,894</td><td class="num">$8,985</td><td>Yes, with room for the maybes and two more couples</td></tr>
+<tr><td><b>Northwoods 6BR Chalet only</b><br><span class="small">Single unit, budget play if Josh and Alyssa pass</span></td><td>6 BR / 6 BA</td><td>14</td><td>True ski-in/out</td><td class="num">$23,249</td><td class="num">$27,214</td><td class="num">$31,528</td><td class="num">$4,504</td><td>No. 14 cap; 7 groups in 6 rooms plus bunk room. Ask host about infants.</td></tr>
+<tr><td><b>184 W Meadow Drive</b><br><span class="small">New 7BR chalet, Vail Village</span></td><td>7 BR / 7.5 BA</td><td>16</td><td>Walk 8 to 10 min; ski storage at Gondola One</td><td class="num">$48,304</td><td class="num">$53,632</td><td class="num">$64,377</td><td class="num">$9,197</td><td>Over cap by 3. Must ask host about infants.</td></tr>
+<tr><td><b>7BR Gore Creek House</b><br><span class="small">Vintage single house, W Meadow Dr</span></td><td>7 BR / 5.5 BA</td><td>16</td><td>Walk 10 to 12 min or bus</td><td class="num">$21,116</td><td class="num">$19,726</td><td class="num">$22,482</td><td class="num">$3,212</td><td>Over cap by 3. Town of Vail cap stated in listing.</td></tr>
+<tr><td><b>Arrabelle, Lionshead: 3BR + 3BR + 2BR + 2BR</b><br><span class="small">Four hotel apartments; trio only sleeps 17</span></td><td>10 BR</td><td>21</td><td>Gondola at the door, ski valet</td><td class="num">$56,900 <span class="est">est.</span></td><td class="num">$66,300 <span class="est">est.</span></td><td class="num">$75,806</td><td class="num">$10,829</td><td>Yes with 4 units; 22 heads needs a 5th</td></tr>
+<tr><td><b>Manor Vail Lodge: 3BR + 3BR + 2BR</b><br><span class="small">Across from Golden Peak kids' ski school</span></td><td>8 BR</td><td>24</td><td>Walk 2 to 3 min to Riva Bahn</td><td class="num">$49,400 <span class="est">est.</span></td><td class="num">$57,600 <span class="est">est.</span></td><td class="num">$65,883</td><td class="num">$9,412</td><td>Yes</td></tr>
+<tr><td><b>Four Seasons: Blue Sky 4BR + Prima 3BR</b><br><span class="small">Ultra luxury reference</span></td><td>7 BR</td><td>18</td><td>Walk 5 to 7 min, ski concierge</td><td class="num">$132,900 <span class="est">est.</span></td><td class="num">$155,100 <span class="est">est.</span></td><td class="num">$177,211</td><td class="num">$25,316</td><td>Confirmed yes; 22 heads no</td></tr>
 </tbody></table></div>
+<p class="small">Dropped since last week: Juniper 311A (5BR) repriced from $31,074 to $47,439 for the same 8 nights, so Juniper 311 (6BR, $31,366) replaces it in the combo. Ritz-Carlton 4BR, Slopeside Lodge at Bridge Street, Moraine Villa, Vail Fairway Lodge, Golden Peak Penthouse and 493 Beaver Dam remain eliminated for the reasons in the September 4 version.</p>
 </section>
 
-<section id="eliminated">
-<h2>Eliminated, and why</h2>
-<ul class="plain elim">
-  <li><b>Golden Peak Penthouse, Vail</b> (rentVAIL / Vrbo 2514048): the best kid-logistics ski-in/out unit in Vail, sleeps 20. <b>Unavailable</b> Jan 5 to 13 and Jan 7 to 15 on Vrbo. Worth one call to rentVAIL in case it is only blocked on Vrbo.</li>
-  <li><b>493 Beaver Dam Road, Vail</b>: 7BR sleeps 16, ski-out on Born Free. <b>Unavailable</b> Jan 7 to 15, and the bed list is mostly sofa beds and Murphy beds (about 4 real couple rooms).</li>
-  <li><b>Chalets at the Lodge at Vail</b> (beside Gondola One, 6BR sleeps 16): Vail Resorts' engine returned <b>no availability</b> for Jan 5 to 13 or Jan 7 to 15; Travel Whisperer is quote-only. UNVERIFIED whether booked or simply not released. Call (866) 588-6676.</li>
-  <li><b>Slopeside Lodge at Bridge Street, Vail</b> (Vail Butler, Airbnb 750083741843377725, $36,863): the best address in Vail, literally at the Gondola One base, but it is four apartments with one 3BR plus a 1BR and two studios. Only about five couple-usable beds plus a bunk room and sofa beds. Poor bedroom fit.</li>
-  <li><b>Ritz-Carlton Residences 4BR, Lionshead</b> (Vrbo 2552081, $34,147): available, but beds are queen, king, and two bunk rooms. Two couple rooms in a 4BR. Not ski-in/out.</li>
-  <li><b>Moraine Villa, Lions Ridge, Vail</b> (Airbnb, 8BR/9.5BA, $39,040): excellent house and bedroom count, but north of I-70 in Lions Ridge. Bus-dependent every ski day.</li>
-  <li><b>Vail Fairway Lodge</b> (Vrbo 4806701ha, 6BR, $18,422): golf course location, shuttle to lifts, sleeps 14.</li>
-  <li><b>"Vail's premier ski-in/out home", Forest Road</b> (Vrbo 5438554, 5BR, $33,148): gorgeous and truly ski-in/out on Born Free, but sleeps 12.</li>
-  <li><b>InvitedHome Quantum, Forest Road</b>: theater, sauna, steam, gym, but 6BR sleeps 14 and pricing is quote-only.</li>
-  <li><b>Superior Point 2E / 2G / 3H, Sugarplum #04 / #07 / #03 / #G, Powder Ridge 12B, Snowbird side</b>: all <b>booked or blocked</b> for Jan 5 to 15 on Canyon Services' live calendars.</li>
-  <li><b>Alta-side Vrbo/Airbnb homes</b> (Lone Pine 5BR $43,414, Fort House 6BR $39,132, "Mt. Superior's Exquisite Manor" 3BR): available but too small for 16 and Alta-side, where your boarders cannot ride.</li>
-  <li><b>Valley-floor homes in Sandy, Cottonwood Heights, Draper</b> (dozens of 6 to 10BR homes at $5k to $16k per week): rejected on your rule about driving Little Cottonwood daily. In January that is 25 to 45 minutes each way plus the "red snake" traffic and the real possibility of being stuck below a closed canyon on a powder day.</li>
-  <li><b>Cliff Club 2BR units, Snowbird</b>: unavailable on Vrbo for the window; configuration is 2 kings plus sofa beds, weak for adults regardless.</li>
+<section id="pick">
+<h2>Recommendation</h2>
+<div class="callout vail"><p><b>Book Northwoods, both 6-bedroom units, for 8 nights (Thu Jan 7 to Fri Jan 15): $62,894, about $8,985 per confirmed group.</b> It is the only Vail option that is true ski-in/out, has enough real bedrooms for the confirmed list plus Josh and Alyssa plus two spare couples, sits next to the Golden Peak children's ski school and nursery, and has no occupancy-cap problem with five small kids. If Josh and Alyssa drop and you do not fill the spot, you still want the second unit: it is where Mom, the nanny and the kids sleep, and it keeps a quiet unit for nap and bedtime shifts while the party continues in the Chalet.</p></div>
+<h4>How the rooms would work</h4>
+<ul class="rooms">
+  <li><b>Chalet, upper king with tub:</b> Erin and Jordan, crib for the 1 year old</li>
+  <li><b>Chalet, ground king ensuite:</b> Megan and Matt</li>
+  <li><b>Chalet, twins made to king, balcony:</b> Zach and Lacey</li>
+  <li><b>Chalet, twins made to king, balcony:</b> Leslie and Ashton</li>
+  <li><b>Chalet, TV room with king:</b> Josh and Alyssa with newborn (or a spare couple)</li>
+  <li><b>Chalet, top-floor bunk room (4 twins, 2 baths):</b> spare, or the 4 year old with a monitor</li>
+  <li><b>Juniper 311, master king:</b> Joe and Lauren, two pack-and-plays for the 2 year olds</li>
+  <li><b>Juniper 311, king:</b> Omar and Vanessa, crib for the baby</li>
+  <li><b>Juniper 311, two doubles:</b> Mom and the nanny, two real beds, 4 year old on a cot if preferred</li>
+  <li><b>Juniper 311, two doubles:</b> spare couple</li>
+  <li><b>Juniper 311, full + twin:</b> spare</li>
+  <li><b>Juniper 311, 3-twin bunk room:</b> kids' room later in the week, or spare</li>
 </ul>
+<p class="small">Every confirmed adult group has a door and a king or two real beds; three rooms stay open for the maybes and any replacement couples. The Chalet's 14 person dining table and terrace are the evening room. Cribs and pack-and-plays are not listed as provided at Northwoods; Vail Realty or a rental service (Baby's Away Vail) can supply them, and I would ask when booking.</p>
+<h4>If you want to spend less</h4>
+<p>The 7BR Gore Creek house at $19,726 for 7 nights is a third of the price and has exactly 7 rooms for 7 confirmed groups (king, five queens, one queen plus twin, plus a two-bed bunk room). It requires the host to accept 19 heads over a stated cap of 16, it is a 10 minute walk or a bus to the lifts, and it is dated. Worth one message to the host if the group would rather bank the savings for dinners and a chef night.</p>
+<h4>If you want to spend more</h4>
+<p>184 W Meadow Drive is the showpiece, but it is capped at 16 and has 6 real couple rooms, so with 19 to 22 heads it only works if the host allows infants and one couple takes the two-double room. The Four Seasons pairing at $177k is the no-compromise luxury answer for the confirmed list only.</p>
 </section>
 
-<section id="compare">
-<h2>Snowbird vs Vail for this trip</h2>
-<div class="cmp">
- <div class="col sb"><h3>Snowbird</h3><dl>
-  <dt>January snow <span class="win">Wins</span></dt><dd>Avg 89" in January on a 73" base vs Vail's 53" on 44". Roughly 1.7x the snow. Steeps stay open.</dd>
-  <dt>Expert terrain <span class="win">Wins</span></dt><dd>Sustained steeps off the Tram, Peruvian and Mineral Basin. Chutes, cliffs, real fall line.</dd>
-  <dt>Snowboard terrain</dt><dd>Boarders are welcome everywhere at Snowbird, but the classic Alta-Bird day is off the table (Alta is skiers only) and Snowbird's best zones involve long traverses and 3.5 mile runouts.</dd>
-  <dt>Ski-in/out inventory</dt><dd>Thin. Townhome clusters on Blackjack Road, or the Cliff Lodge. No big luxury homes.</dd>
-  <dt>Dining and apres</dt><dd>Self-contained resort: Tram Club, Aerie, SeventyOne, Steak Pit, El Chanate. Fine for a few nights, thin for eight.</dd>
-  <dt>Kids and childcare</dt><dd>Superior Child Care at the Cliff Lodge, 2 months to 12 years, $205 full day (2026-27 posted). Level 3 family pool. Very little else for non-skiing kids.</dd>
-  <dt>Airport <span class="win">Wins</span></dt><dd>SLC is 35 to 45 minutes away in good conditions and is a major hub for rebooking.</dd>
-  <dt>Closure risk</dt><dd>Real. SR-210 crosses 64 avalanche paths; several road events per winter, interlodge confinement possible. Staying in the canyon converts closures into private ski days, but arrivals and departures can slip.</dd>
-  <dt>Non-ski time</dt><dd>Cliff Spa (16+), scenic tram, snowshoe tours. Not much for the nanny and toddlers beyond the pool.</dd>
- </dl></div>
- <div class="col vail"><h3>Vail</h3><dl>
-  <dt>January snow</dt><dd>Reliable front side; Back Bowls and Blue Sky Basin can be thin or closed in a low-snow early January.</dd>
-  <dt>Expert terrain</dt><dd>5,317 acres, 42% advanced. Seven Back Bowls plus Blue Sky Basin. Huge variety, less sustained steepness than Snowbird.</dd>
-  <dt>Snowboard terrain <span class="win">Wins</span></dt><dd>No restrictions, three terrain parks, and the whole mountain is open to everyone. Flat bowl runouts are the one gripe.</dd>
-  <dt>Ski-in/out inventory <span class="win">Wins</span></dt><dd>Northwoods, Arrabelle, Lodge at Vail chalets, Forest Road and Beaver Dam homes. Plus walkable villages for everything else.</dd>
-  <dt>Dining and apres <span class="win">Wins</span></dt><dd>75+ restaurants across two pedestrian villages, Sweet Basil, Matsuhisa, Pepi's, Red Lion live music. Eight nights of variety and a real birthday dinner.</dd>
-  <dt>Kids and childcare <span class="win">Wins</span></dt><dd>Golden Peak and Lionshead children's ski schools, Small World nursery at Golden Peak, Adventure Ridge tubing, two ice rinks, Imagination Station. The nanny has options every day.</dd>
-  <dt>Airport</dt><dd>DEN is 2 to 2.5 hours over two passes with I-70 closure risk; EGE is 35 minutes but a small, weather-prone airport with limited flights for 16 people.</dd>
-  <dt>Closure risk</dt><dd>I-70 closures are common but usually hours, not days, and you are never confined indoors.</dd>
-  <dt>Non-ski time <span class="win">Wins</span></dt><dd>Shopping on heated walkways, spas, skating, snowmobiling, Nordic on the golf course, tubing.</dd>
- </dl></div>
-</div>
-<div class="callout vail"><p><b>My call: Vail, for this specific trip.</b> If this were 12 advanced skiers with no kids, Snowbird would win on snow and terrain and I would send you to the Sugarplum townhomes. But this is Erin's birthday week with four toddlers, two snowboarders who cannot ride Alta, a grandmother and a nanny who need something to do, and eight nights of dinners for 16. Vail is the only one of the two that offers true ski-in/out lodging with 11 real bedrooms, a kids' ski school next door, and a walkable village for the birthday dinner. The trade you are making is snow depth and steepness for everything else, and in early January on a pass-holder week that is a trade I would make. Buy the Epic Pass or Epic 7-Day now (prices rise Sept 7 and sales end early December); Snowbird is on Ikon if you go the other way.</p></div>
-<p class="small">If snow is the deciding factor for the group, the honest Snowbird pick is Sugarplum #6 + #15 at $37,225, and you should hold the Northwoods units in Vail as the fallback until the Sugarplum contracts are signed.</p>
-</section>
-
-<section id="links">
-<h2>Direct links to every finalist</h2>
-<h4>Snowbird</h4>
+<section id="options">
+<h2>All Vail options in detail</h2>
+<p>Full write-ups with amenities, location notes, pros and cons and scores for each of these are in the September 4 version of this page (version history). What changed for the new group:</p>
 <ul class="plain">
-  <li>Sugarplum #6 (Alta Chalets): <a href="https://www.airbnb.com/rooms/52529666">airbnb.com/rooms/52529666</a>, direct: <a href="https://www.altachalets.com/village-at-sugarplum-6/">altachalets.com/village-at-sugarplum-6</a>, 801-424-2426</li>
-  <li>Sugarplum #15: <a href="https://www.vrbo.com/3732867">vrbo.com/3732867</a></li>
-  <li>Sugarplum #18 (Canyon Services): <a href="https://canyonservices.com/vrp/unit/The_Village_at_Sugarplum_Unit_18-92-15">canyonservices.com, Unit 18</a>, 888-546-5707</li>
-  <li>Palace de Pow (Alta Chalets): <a href="https://www.airbnb.com/rooms/954983815550621405">Airbnb</a>, <a href="https://www.vrbo.com/2622966">Vrbo</a>, <a href="https://www.booking.com/hotel/us/brand-new-home-designer-home-ski-in-out-snowbird.html">Booking.com</a></li>
-  <li>Nicholson Chalet (Alta Chalets): <a href="https://www.airbnb.com/rooms/18946191">airbnb.com/rooms/18946191</a>, direct: <a href="https://www.altachalets.com/nicholson-chalet/">altachalets.com/nicholson-chalet</a></li>
-  <li>AltaBird Chalet: <a href="https://www.vrbo.com/4260829ha">vrbo.com/4260829ha</a></li>
-  <li>Fort House: <a href="https://www.vrbo.com/1920609">vrbo.com/1920609</a></li>
-  <li>Cliff Lodge: <a href="https://www.booking.com/hotel/us/clifflodgeandspa.html">Booking.com</a>; Snowbird Central Reservations 800-232-9542, lodging@snowbird.com; Group Sales 800-906-2871</li>
-  <li>Superior Child Care (Cliff Lodge): <a href="https://www.superiorchildcare.com/365">superiorchildcare.com</a></li>
-</ul>
-<h4>Vail</h4>
-<ul class="plain">
-  <li>Northwoods 6BR Chalet: <a href="https://www.vrbo.com/3771159">vrbo.com/3771159</a></li>
-  <li>Northwoods Juniper 311A (5BR): <a href="https://www.vrbo.com/1637462">vrbo.com/1637462</a></li>
-  <li>Northwoods Juniper 311 (6BR): <a href="https://www.vrbo.com/3713821">vrbo.com/3713821</a>; Vail Realty direct: <a href="https://vailrealty.com/property/northwoods/">vailrealty.com/property/northwoods</a></li>
-  <li>184 W Meadow Drive: <a href="https://www.vrbo.com/1829358">vrbo.com/1829358</a>, <a href="https://www.airbnb.com/rooms/1167500304241964200">Airbnb</a>, Rentals in Vail direct 970-401-8570</li>
-  <li>The Arrabelle at Vail Square: <a href="https://www.booking.com/hotel/us/the-arrabelle-at-vail-square.html">Booking.com</a>; Vail Resorts reservations (866) 588-6676</li>
-  <li>7BR Gore Creek House: <a href="https://www.vrbo.com/618006">vrbo.com/618006</a>, <a href="https://www.airbnb.com/rooms/37243769">Airbnb</a></li>
-  <li>Manor Vail Lodge: <a href="https://www.booking.com/hotel/us/manor-vail-lodge.html">Booking.com</a>, direct <a href="https://www.manorvail.com/accommodations/">manorvail.com</a>, 800-950-8245</li>
-  <li>Four Seasons Resort Vail: <a href="https://www.booking.com/hotel/us/four-seasons-resort-vail.html">Booking.com</a>, direct <a href="https://www.fourseasons.com/vail/villa-residence-rentals/">fourseasons.com/vail</a>, 970-477-8680</li>
-  <li>Ascension (InvitedHome): <a href="https://www.airbnb.com/rooms/998666190045285505">Airbnb</a>, <a href="https://invitedhome.com/vail-luxury-vacation-rentals/forest-road/ascension">invitedhome.com</a></li>
-  <li>Golden Peak Penthouse (booked on Vrbo, try direct): <a href="https://www.rentvail.com/rentals/golden-peak-penthouse">rentvail.com</a></li>
-  <li>Chalets at the Lodge at Vail (no availability shown, call): <a href="https://www.vail.com/Plan-Your-Trip/stay/details/The-Chalets-at-the-Lodge-at-Vail.aspx?location=50018732">vail.com</a>, (866) 588-6676</li>
-  <li>Vail children's ski school: <a href="https://www.vail.com/plan-your-trip/ski-and-ride-lessons.aspx">vail.com lessons</a>; Town of Vail bus: <a href="https://ride.vail.gov">ride.vail.gov</a></li>
+  <li><b>Northwoods Chalet + Juniper 311:</b> moves from a good fit to the clear pick. Nine adult-capable rooms plus two bunk rooms, sleeps 26, both 6BR units verified available for all three trip lengths. Links: <a href="https://www.vrbo.com/3771159">Chalet</a>, <a href="https://www.vrbo.com/3713821">Juniper 311</a>, <a href="https://vailrealty.com/property/northwoods/">Vail Realty direct</a>.</li>
+  <li><b>184 W Meadow Drive:</b> drops from 2nd to 3rd. Cap of 16 and 6 couple rooms were a compromise for 16 people and are a real problem for 19 to 22. <a href="https://www.vrbo.com/1829358">Vrbo</a>, <a href="https://www.airbnb.com/rooms/1167500304241964200">Airbnb</a>.</li>
+  <li><b>Arrabelle:</b> now needs four apartments instead of three to clear 19 heads, pushing it to about $75,800 for 8 nights with still no shared living room. Drops to 5th. <a href="https://www.booking.com/hotel/us/the-arrabelle-at-vail-square.html">Booking.com</a>.</li>
+  <li><b>Manor Vail:</b> holds 4th. Three condos sleep 24, across the street from the kids' ski school, four hot tubs, breakfast included, but bed types are still unverified and there is no group room. <a href="https://www.booking.com/hotel/us/manor-vail-lodge.html">Booking.com</a>, 800-950-8245.</li>
+  <li><b>7BR Gore Creek House:</b> stays the value pick and now has exactly the right room count, but the 16 cap is a hard question for the host. <a href="https://www.vrbo.com/618006">Vrbo</a>.</li>
+  <li><b>Northwoods Chalet alone:</b> new entry as the budget fallback if the group ends at 7 rooms and the host will treat the four under-2s as infants. Sleeps 14 on paper.</li>
 </ul>
 </section>
 
-<footer>
-<p>Method: live browser sessions on Airbnb, Vrbo, Booking.com, Canyon Services, Alta Chalets, Snowbird.com, Vail.com and Travel Whisperer on September 4, 2026, plus web research on Cuvée, InvitedHome, rentVAIL, Vail Realty, Moving Mountains, Gondola Resorts, Four Seasons, Ski Utah and UDOT/CDOT. Airbnb displayed some prices in CAD by default; every figure here was re-pulled in USD. Prices change daily; "UNVERIFIED" marks anything I could not confirm on a live page. Nothing was booked, no payment information was entered, and no hosts were contacted.</p>
-</footer>
+<section id="next">
+<h2>Next steps</h2>
+<ul class="plain">
+  <li>Decide 8 nights vs 7. The Northwoods pair is $9,272 more for the 8th night and 7th ski day, about $1,325 per group.</li>
+  <li>Message Vail Realty (or book through Vrbo) for both Northwoods units on Jan 7 to 15. Ask: is Vail's 10.8% lodging tax inside the Vrbo total, can they hold both units together, and can they arrange cribs and pack-and-plays. Vrbo terms are 50% within 24 hours, non-refundable inside 60 days, so lock the guest list before Nov 8.</li>
+  <li>Give Josh and Alyssa a soft deadline. With 12 bedrooms you can hold their room until the November payment without changing the booking.</li>
+  <li>Book Golden Peak children's ski school and the Small World nursery as soon as 2026-27 booking opens; January weeks fill early and the 4 year old and both 2 year olds qualify for different programs.</li>
+  <li>Buy Epic passes before prices rise again and before sales close in early December.</li>
+</ul>
+</section>
+
+<footer><p>Prices pulled live on Vrbo September 9, 2026 for the exact dates shown. Booking.com figures for 6 and 7 nights are estimates pro-rated from September 4 verified 8-night totals. Nothing booked, no hosts contacted.</p></footer>
 </div>
 </body>
 </html>
