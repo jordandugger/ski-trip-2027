@@ -1,295 +1,628 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Erin's Birthday Ski Trip Lodging</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Breck Ski Trip 2027</title>
+<meta name="description" content="Group planning guide for the Snowflake Chateau ski trip, Breckenridge, January 7 to 15, 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
+/* Layout: sticky section nav on top, one reading column, full-width tables in cards. Alpine palette: glacier blue accent on a cool slate neutral. */
 :root{
-  --bg:#F3F6F9; --surface:#FFFFFF; --surface-2:#E9EEF3; --ink:#18212B; --ink-2:#4B5966; --ink-3:#7B8894;
-  --line:#D3DBE3; --line-2:#BFC9D3;
-  --sb:#1E6AA8; --sb-soft:#DCEAF6; --vail:#9B3B3B; --vail-soft:#F3E0E0;
-  --good:#2F7D4F; --warn:#B7791F; --bad:#B03A3A;
-  --shadow:0 1px 2px rgba(24,33,43,.06),0 8px 24px -12px rgba(24,33,43,.18);
+  --bg:#f5f7fa; --surface:#ffffff; --fg:#17202b; --muted:#5b6978; --line:#d9e0e8;
+  --accent:#1e6fb8; --accent-soft:#e3eef9; --warn:#b4530a; --warn-soft:#fdeedd; --ok:#2a7a4b;
+  --display:"Sora",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif;
+  color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0E141B; --surface:#161E27; --surface-2:#1E2833; --ink:#E7EDF3; --ink-2:#B3BFCB; --ink-3:#7F8C99;
-  --line:#2A3540; --line-2:#3A4754; --sb:#5FA3E0; --sb-soft:#173049; --vail:#D9797A; --vail-soft:#3B2224;
-  --good:#5FBF85; --warn:#E0A94A; --bad:#E07070; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
-}}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f151c; --surface:#171f29; --fg:#e8edf3; --muted:#9aa8b8; --line:#2a3542;
+    --accent:#6fb1ec; --accent-soft:#1a2c40; --warn:#f0a35e; --warn-soft:#3a2714; --ok:#6fcf97;
+    color-scheme:dark;
+  }
+}
 :root[data-theme="dark"]{
-  --bg:#0E141B; --surface:#161E27; --surface-2:#1E2833; --ink:#E7EDF3; --ink-2:#B3BFCB; --ink-3:#7F8C99;
-  --line:#2A3540; --line-2:#3A4754; --sb:#5FA3E0; --sb-soft:#173049; --vail:#D9797A; --vail-soft:#3B2224;
-  --good:#5FBF85; --warn:#E0A94A; --bad:#E07070; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  --bg:#0f151c; --surface:#171f29; --fg:#e8edf3; --muted:#9aa8b8; --line:#2a3542;
+  --accent:#6fb1ec; --accent-soft:#1a2c40; --warn:#f0a35e; --warn-soft:#3a2714; --ok:#6fcf97;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55}
-h1,h2,h3,h4{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;font-variation-settings:"opsz" 96;text-wrap:balance;margin:0;line-height:1.1;letter-spacing:-.01em}
-h1{font-size:clamp(34px,5vw,54px);font-weight:800}
-h2{font-size:30px;font-weight:700;margin:72px 0 20px;padding-top:24px;border-top:2px solid var(--ink)}
-h3{font-size:22px;font-weight:700;margin:0 0 6px}
-h4{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);margin:18px 0 6px}
-p{margin:0 0 14px;max-width:70ch}
-a{color:inherit;text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
-a:hover{text-decoration-color:currentColor}
-a:focus-visible,button:focus-visible{outline:2px solid var(--sb);outline-offset:2px}
-.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;font-size:.92em}
-.wrap{max-width:820px;margin:0 auto;padding:40px 22px 100px}
-.wide{max-width:1180px;margin-left:calc(50% - min(590px,50vw) + 0px)}
-@media(max-width:1230px){.wide{margin-left:-22px;margin-right:-22px;padding:0 22px}}
-.eyebrow{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--ink-3)}
-header .lede{font-size:20px;color:var(--ink-2);max-width:62ch;margin-top:16px}
-.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;color:var(--ink-3);font-size:14px}
-nav.toc{display:flex;flex-wrap:wrap;gap:6px 14px;margin:28px 0 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px}
-nav.toc a{text-decoration:none;color:var(--ink-2)}
-nav.toc a:hover{color:var(--ink)}
-.tag{display:inline-block;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:3px;vertical-align:middle}
-.tag.sb{background:var(--sb-soft);color:var(--sb)}
-.tag.vail{background:var(--vail-soft);color:var(--vail)}
-.tag.uv{background:var(--surface-2);color:var(--warn);border:1px solid var(--line)}
-.tag.ok{background:var(--surface-2);color:var(--good);border:1px solid var(--line)}
-.callout{background:var(--surface);border-left:4px solid var(--sb);padding:16px 20px;margin:20px 0;box-shadow:var(--shadow)}
-.callout.vail{border-left-color:var(--vail)}
-.callout.warn{border-left-color:var(--warn)}
-.callout p:last-child{margin-bottom:0}
-/* verdict tiles */
-.verdicts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:22px 0}
-.verdict{background:var(--surface);border:1px solid var(--line);padding:14px 16px}
-.verdict .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
-.verdict .v{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:18px;margin-top:4px;line-height:1.2}
-.verdict .d{font-size:14px;color:var(--ink-2);margin-top:4px}
-/* property dossier */
-.prop{background:var(--surface);border:1px solid var(--line);margin:26px 0;box-shadow:var(--shadow)}
-.prop-head{padding:20px 24px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
-.prop-head .rank{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
-.prop-head .price{text-align:right}
-.prop-head .price .big{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:26px;letter-spacing:-.02em}
-.prop-head .price .sub{font-size:13px;color:var(--ink-2)}
-.prop-body{padding:6px 24px 22px}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0 28px;margin:10px 0 4px}
-.fact{padding:10px 0;border-bottom:1px solid var(--line)}
-.fact .k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
-.fact .v{margin-top:2px;font-size:15.5px}
-.rooms{margin:6px 0 0;padding:0;list-style:none;font-size:15px;columns:2;column-gap:28px}
-.rooms li{padding:5px 0;border-bottom:1px dotted var(--line);break-inside:avoid}
-.rooms li b{font-weight:600}
-@media(max-width:600px){.rooms{columns:1}}
-.procon{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-@media(max-width:640px){.procon{grid-template-columns:1fr}}
-.procon ul{margin:4px 0 0;padding-left:18px;font-size:15px}
-.procon li{margin:4px 0}
-.scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px 18px;margin-top:8px}
-.score{font-size:13px}
-.score .lbl{display:flex;justify-content:space-between;color:var(--ink-2)}
-.score .lbl b{font-family:"JetBrains Mono",monospace;color:var(--ink)}
-.score .bar{height:5px;background:var(--surface-2);margin-top:4px;border-radius:2px;overflow:hidden}
-.score .bar i{display:block;height:100%;background:var(--ink-2)}
-.prop.sb .score .bar i{background:var(--sb)}
-.prop.vail .score .bar i{background:var(--vail)}
-.overall{display:flex;align-items:baseline;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
-.overall .n{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:28px}
-.overall .t{color:var(--ink-2);font-size:14px}
-.links{font-size:14px;color:var(--ink-2)}
-.links a{display:inline-block;margin-right:14px}
-/* tables */
-.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}
-table{border-collapse:collapse;width:100%;font-size:14px;min-width:980px}
-th{font-family:"Bricolage Grotesque",sans-serif;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:12px 12px;border-bottom:2px solid var(--line-2);background:var(--surface);position:sticky;top:0}
-td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.45rem;font-weight:600;padding-top:.25rem}
+h3{font-size:1.02rem;font-weight:600;margin-top:1.4rem;margin-bottom:.5rem;color:var(--fg)}
+p{margin:.6rem 0}
+.eyebrow{font-family:var(--display);font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* Header */
+header.hero{background:linear-gradient(180deg,var(--accent-soft),var(--bg) 90%);padding-block:2.6rem 1.6rem;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;gap:.9rem}
+.hero p.lead{font-size:1.08rem;max-width:62ch;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;margin-top:.5rem}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.75rem .9rem}
+.fact .k{font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.fact .v{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-top:.15rem}
+
+/* Nav */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:.25rem;overflow-x:auto;padding-block:.5rem;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{white-space:nowrap;font-size:.86rem;padding:.4rem .7rem;border-radius:999px;color:var(--fg)}
+nav.toc a:hover{background:var(--accent-soft);text-decoration:none}
+
+/* Sections */
+main .wrap{display:grid;gap:2.6rem;padding-block:2.2rem 4rem}
+section{scroll-margin-top:4.2rem;display:grid;gap:.2rem}
+section>p:first-of-type{font-size:1.03rem}
+.callout{border-left:4px solid var(--warn);background:var(--warn-soft);padding:.85rem 1rem;border-radius:0 10px 10px 0;margin:.6rem 0}
+.callout strong{color:var(--warn)}
+.note{color:var(--muted);font-size:.92rem}
+
+/* Tables */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);margin:.7rem 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.93rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;vertical-align:top;padding:.6rem .8rem;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:color-mix(in srgb,var(--surface) 70%,var(--bg));font-weight:600}
 tr:last-child td{border-bottom:0}
-td.num{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
-td.rank{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:18px;color:var(--ink-3)}
-.elim{font-size:15px}
-.elim li{margin:6px 0}
-.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
-@media(max-width:700px){.cmp{grid-template-columns:1fr}}
-.cmp .col{background:var(--surface);border:1px solid var(--line);padding:16px 18px}
-.cmp .col h3{font-size:18px;padding-bottom:8px;border-bottom:3px solid}
-.cmp .col.sb h3{border-color:var(--sb);color:var(--sb)}
-.cmp .col.vail h3{border-color:var(--vail);color:var(--vail)}
-.cmp dl{margin:10px 0 0;font-size:14.5px}
-.cmp dt{font-weight:600;margin-top:10px}
-.cmp dd{margin:2px 0 0;color:var(--ink-2)}
-.win{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--good);margin-left:6px}
-.dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:16px 0}
-.date{background:var(--surface);border:1px solid var(--line);padding:14px 16px;font-size:15px}
-.date .h{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px}
-.date.rec{border-color:var(--sb);border-width:2px}
-.small{font-size:14px;color:var(--ink-2)}
-ul.plain{padding-left:20px}
-ul.plain li{margin:5px 0}
-footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-3)}
-@media (prefers-reduced-motion: no-preference){.prop{transition:box-shadow .2s}}
-</style>
-<style>
-.matrix td.num{font-weight:600}
-.matrix .est{color:var(--warn);font-weight:400;font-size:12px}
-.grp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
-@media(max-width:700px){.grp{grid-template-columns:1fr}}
-.grp .col{background:var(--surface);border:1px solid var(--line);padding:14px 18px;font-size:15px}
-.grp .col h3{font-size:17px;margin-bottom:8px}
-.grp ul{margin:0;padding-left:18px}
-.grp li{margin:4px 0}
-.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
-.kpi div{background:var(--surface);border:1px solid var(--line);padding:12px 14px}
-.kpi .k{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
-.kpi .v{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:22px;margin-top:3px}
-.kpi .d{font-size:13px;color:var(--ink-2)}
+td.fill,.fill{color:var(--muted);font-style:italic}
+.pill{display:inline-block;padding:.1rem .5rem;border-radius:999px;font-size:.78rem;font-weight:600;background:var(--accent-soft);color:var(--accent)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+
+/* Lists */
+ul,ol{margin:.4rem 0;padding-left:1.25rem}
+li{margin:.25rem 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem 1.6rem}
+.cols>div{min-width:0}
+
+/* Checklist */
+.todo{list-style:none;padding:0;margin:.3rem 0}
+.todo li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px dashed var(--line)}
+.todo input{margin-top:.3rem;accent-color:var(--accent);width:1rem;height:1rem;flex:none}
+.todo label{flex:1;cursor:pointer}
+.todo input:checked+label{color:var(--muted);text-decoration:line-through}
+.owner{color:var(--muted);font-size:.86rem}
+
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+footer .wrap{padding-block:1.4rem 2.5rem}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (max-width:480px){h2{font-size:1.3rem}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div class="eyebrow">Group ski trip, January 2027. Updated September 9, 2026</div>
-  <h1>Erin's Birthday Ski Trip Lodging</h1>
-  <p class="lede">Vail is the destination, the trip is 8 days (Fri Jan 8 to Fri Jan 15, 7 nights, 6 ski days), and the target is $3,000 to $6,000 per couple all-in. This version leads with the budget shortlist from a second full sweep of Vrbo, Airbnb and Booking.com on September 9. The full-price options and the Snowbird research remain below and in version history.</p>
-  <nav class="toc">
-    <a href="#budget">Budget shortlist</a><a href="#group">The group</a><a href="#length">Trip length</a><a href="#matrix">Price matrix</a><a href="#pick">Recommendation</a><a href="#options">All Vail options</a><a href="#next">Next steps</a>
-  </nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Snowflake Chateau · Peak 9 · Breckenridge</div>
+    <h1>Breck Ski Trip 2027</h1>
+    <p class="lead">Thursday January 7 to Friday January 15, 2027. Five families, three nannies, eight kids under 5, one ski-in/ski-out house with a sauna. Sarah and Ben join for part of the week. This is the living plan. Add to it, fix it, and keep it current.</p>
+    <div class="facts">
+      <div class="fact"><div class="k">Dates</div><div class="v">Jan 7 to 15</div></div>
+      <div class="fact"><div class="k">Nights</div><div class="v">8</div></div>
+      <div class="fact"><div class="k">Check-in / out</div><div class="v">4 pm / 10 am</div></div>
+      <div class="fact"><div class="k">Walk to lift</div><div class="v">5 min</div></div>
+      <div class="fact"><div class="k">Per family (5)</div><div class="v">About $4,770</div></div>
+      <div class="fact"><div class="k">Erin's birthday</div><div class="v">Sun Jan 10</div></div>
+    </div>
+    <p class="note">Last updated November 8, 2026.</p>
+  </div>
 </header>
 
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="#glance">At a glance</a>
+    <a href="#who">Who's coming</a>
+    <a href="#house">The house</a>
+    <a href="#sleep">Sleeping plan</a>
+    <a href="#travel">Getting there</a>
+    <a href="#kids">Kids</a>
+    <a href="#passes">Passes</a>
+    <a href="#days">Day by day</a>
+    <a href="#food">Food</a>
+    <a href="#offmtn">Off-mountain</a>
+    <a href="#pack">Packing</a>
+    <a href="#health">Altitude &amp; medical</a>
+    <a href="#costs">Costs</a>
+    <a href="#sarahben">Sarah &amp; Ben</a>
+    <a href="#todo">To-do</a>
+  </div>
+</nav>
 
-<section id="budget">
-<h2>Budget shortlist: 8 day trip, $3,000 to $6,000 per couple</h2>
-<p>Second sweep, September 9 afternoon: every Vrbo and Airbnb listing in the Town of Vail with 6+ bedrooms for Jan 8 to 15, plus every 3 to 4 bedroom condo in Lionshead and Vail Village that could be combined into a same-building set. Budget math: 7 confirmed groups, Epic 7-Day Pass at $673 per adult ($1,346 per couple), so lodging needs to land between about $12,000 and $33,000 total. Everything over that (Northwoods pair, 184 W Meadow, Arrabelle, Manor Vail, Four Seasons) is now out of scope and moved down the page.</p>
-<div class="callout vail"><p><b>Recommendation: three 3-bedroom condos at The Landmark, Lionshead, $26,276 for 7 nights, about $5,100 per couple all-in.</b> The Landmark sits on Lionshead Place, steps from the Eagle Bahn gondola, with a rooftop pool, hot tubs and a fitness center. Three units are open for our dates in the same building: 9 bedrooms, 9.5 baths, sleeps 24. Seven of the nine rooms are king or queen, so every confirmed adult group gets a door and a real bed, and the two twin-bunk rooms take the older kids. It is the only option that clears the budget, the headcount and the bedroom count at once. The trade is that it is three condos rather than one house: evenings happen in one unit's living room, on the rooftop, or at the dozen restaurants on Lionshead Square outside the door.</p></div>
-<div class="tbl matrix"><table>
-<thead><tr><th>Option</th><th>Bedrooms / sleeps</th><th>Ski access</th><th>Lodging, 7 nights</th><th>Lodging per couple</th><th>All-in per couple (+$1,346 passes)</th><th>Fits 19 heads?</th><th>Compromise</th></tr></thead>
-<tbody>
-<tr><td><b>The Landmark x3, Lionshead</b><br><span class="small">Units 210 ($8,067), 206 ($8,770), and the 3BR w/ king + 2 doubles ($9,439). <a href="https://www.vrbo.com/886712" target="_blank" rel="noopener">Landmark 210</a> | <a href="https://www.vrbo.com/886708" target="_blank" rel="noopener">Landmark 206</a> | <a href="https://www.vrbo.com/4624309" target="_blank" rel="noopener">Landmark 3BR</a></span></td><td>9 BR / 9.5 BA, sleeps 24</td><td>Steps to Eagle Bahn gondola</td><td class="num">$26,276</td><td class="num">$3,754</td><td class="num">$5,100</td><td>Yes, with 2 rooms spare</td><td>Three condos, no single great room</td></tr>
-<tr><td><b>The Landmark x3 + Vail International #402</b><br><span class="small">Adds a 3BR + loft two blocks away if Josh and Alyssa plus a spare couple join. <a href="https://www.vrbo.com/2806133" target="_blank" rel="noopener">Vail International 402</a></span></td><td>12 BR, sleeps 32</td><td>Steps / 3 min walk</td><td class="num">$34,132</td><td class="num">$4,266 (8 groups)</td><td class="num">$5,612</td><td>Yes, 22+</td><td>Fourth unit is in a different building</td></tr>
-<tr><td><b>Northwoods 6BR Chalet only, Golden Peak</b><br><span class="small"><a href="https://www.vrbo.com/3771159" target="_blank" rel="noopener">Vrbo</a></span></td><td>6 BR / 6 BA, sleeps 14</td><td>True ski-in/out, Riva Bahn</td><td class="num">$27,214</td><td class="num">$3,888</td><td class="num">$5,234</td><td>No, capped at 14; host must allow infants</td><td>7 groups into 6 rooms + bunk room; no spare</td></tr>
-<tr><td><b>Montaneros 202 + 408, Lionshead</b><br><span class="small">Platinum-rated, pool and hot tub, steps to gondola. <a href="https://www.vrbo.com/1369985" target="_blank" rel="noopener">202</a> | <a href="https://www.vrbo.com/1419307" target="_blank" rel="noopener">408</a></span></td><td>6 BR / 5 BA, sleeps 16</td><td>Steps to Eagle Bahn gondola</td><td class="num">$22,555</td><td class="num">$3,222</td><td class="num">$4,568</td><td>Borderline; 16 + sofas</td><td>6 adult rooms for 7 groups (3 are twins made to king); add a Landmark unit for $8,770 to fix</td></tr>
-<tr><td><b>7BR Gore Creek House, W Meadow Dr</b><br><span class="small"><a href="https://www.vrbo.com/618006" target="_blank" rel="noopener">Vrbo</a></span></td><td>7 BR / 5.5 BA, sleeps 16</td><td>Walk 10 to 12 min or bus</td><td class="num">$19,726</td><td class="num">$2,818</td><td class="num">$4,164</td><td>Capped at 16; host must allow 19</td><td>6 couple rooms; dated; shared baths</td></tr>
-<tr><td><b>Cascade Village riverfront 7BR</b><br><span class="small">Behind the Grand Hyatt, 124 reviews at 10/10, hot tub. <a href="https://www.vrbo.com/247752ha" target="_blank" rel="noopener">Vrbo</a></span></td><td>7 BR / 5.5 BA, sleeps 16</td><td>5 to 8 min walk to Chair 20 via Cascade Way</td><td class="num">$15,587</td><td class="num">$2,227</td><td class="num">$3,573</td><td>Capped at 16</td><td>Only 5 adult rooms (3K, 2Q) + 2 twin-bunk rooms; Cascade is a bus ride from the villages</td></tr>
-<tr><td><b>Vantage Point 4BR + 411, Lionshead</b><br><span class="small">125 yards from gondola, hot tubs. <a href="https://www.vrbo.com/280742" target="_blank" rel="noopener">4BR</a> | <a href="https://www.vrbo.com/757890" target="_blank" rel="noopener">411</a></span></td><td>7 BR, sleeps 16</td><td>2 min walk to gondola</td><td class="num">$18,050</td><td class="num">$2,579</td><td class="num">$3,925</td><td>Borderline</td><td>Only 4 adult rooms (K,K,K,Q) + 3 bunk rooms</td></tr>
-<tr><td><b>West Vail duplex, 8BR, 2 hot tubs</b><br><span class="small"><a href="https://www.vrbo.com/3227385" target="_blank" rel="noopener">Vrbo</a></span></td><td>8 BR / 5 BA, sleeps 18</td><td>Free bus, 10 to 15 min</td><td class="num">$17,180</td><td class="num">$2,454</td><td class="num">$3,800</td><td>Close (18)</td><td>Bed types not listed; bus every ski day</td></tr>
-<tr><td><b>Slopeside Lodge at Bridge Street</b><br><span class="small"><a href="https://www.airbnb.com/rooms/750083741843377725" target="_blank" rel="noopener">Airbnb</a></span></td><td>6 BR (4 apartments), sleeps 20</td><td>At the base of Gondola One</td><td class="num">$28,724</td><td class="num">$4,103</td><td class="num">$5,449</td><td>Yes</td><td>Two of the six "bedrooms" are studios; sofa beds</td></tr>
-</tbody></table></div>
-<h4>How the Landmark rooms would work</h4>
-<ul class="rooms">
-  <li><b>206 king (3.5 BA unit):</b> Erin and Jordan, crib for the 1 year old</li>
-  <li><b>206 queen:</b> Megan and Matt</li>
-  <li><b>206 twin bunk:</b> the 4 year old (next to Erin and Jordan)</li>
-  <li><b>3BR king:</b> Joe and Lauren, two pack-and-plays</li>
-  <li><b>3BR two doubles:</b> Mom and the nanny, two real beds</li>
-  <li><b>3BR queen:</b> Zach and Lacey</li>
-  <li><b>210 queen:</b> Omar and Vanessa, crib</li>
-  <li><b>210 queen:</b> Leslie and Ashton</li>
-  <li><b>210 twin bunk:</b> Josh and Alyssa's spot if they come (or add Vail International 402)</li>
-</ul>
-<p class="small">Every couple in a king or queen, Mom and the nanny in a two-bed room, each family with its kids in the same unit. Each condo has a full kitchen, a sofa bed and a balcony; unit 206 has Wolf appliances and 1,590 sq ft and is the natural gathering unit. All three are managed separately (206 and 210 by the same Platinum-rated manager), so book all three the same day.</p>
-<h4>What the budget rules out</h4>
-<p>Anything that puts everyone under one roof with ski-in/out access and 7+ adult rooms costs $53,000 or more for the week in Vail (Northwoods pair $53,622, 184 W Meadow $53,632). Within the $3,000 to $6,000 per couple range, the choice is between a same-building condo set at the Lionshead gondola (the Landmark) or a single house that is either short on adult bedrooms (Cascade, Gore Creek) or a bus ride from the lifts (West Vail). For this group, with five kids under 5 and a birthday to celebrate, the Landmark's location and room count win.</p>
-<p class="small">Also checked and not competitive at this budget: Beaver Creek has several 6 to 7BR ski-in/out homes at $18,000 to $28,000 for the week (Falcon Lodge, North Starr Chateau, Beaver Creek Village ski-in/out home) and it is on the same Epic pass, 25 minutes west. Worth knowing if the group would trade Vail's villages for a true single house at Beaver Creek. Breckenridge, last year's cheapest pick, still has a dozen 7 to 10BR homes at $15,000 to $22,000 for the week on Airbnb.</p>
+<main>
+<div class="wrap">
+
+<section id="glance">
+  <h2>At a glance</h2>
+  <div class="callout"><strong>This week:</strong> Epic pass prices rise November 15, and the house's final 50% payment is due about December 8. Everything else here is bookable now.</div>
+  <div class="tbl"><table>
+    <tr><th>Item</th><th>Detail</th></tr>
+    <tr><td>Dates</td><td>Thu Jan 7 to Fri Jan 15, 2027 (8 nights). Check-in 4:00 pm, check-out 10:00 am</td></tr>
+    <tr><td>House</td><td><a href="https://www.brecklodgingco.com/vrp/unit/snowflake-chateau">Snowflake Chateau</a>, Snowflake Dr area, Peak 9, ski-in/ski-out. 5,498 sq ft, 6 bedrooms + bunk room + loft, 6.5 baths, hot tub, dry sauna, heated 2-car garage</td></tr>
+    <tr><td>Headcount</td><td>10 parents, 3 nannies, 8 kids (6 months to 4). 20 people while Sarah and Ben are here, 14 the rest of the week. Kids don't count toward the 16-guest listing cap</td></tr>
+    <tr><td>Lifts</td><td>Beaver Run SuperChair is a 5 min walk (0.3 mi). Kids' ski school is at Beaver Run too</td></tr>
+    <tr><td>House cost</td><td>About $23,860 after the 20% discount, before 4.5% admin fee and tax. Roughly $4,770 per family across 5</td></tr>
+    <tr><td>Erin's birthday</td><td>Sunday January 10. Adults-only dinner in town, sitters at the house</td></tr>
+    <tr><td>Snow Sculptures</td><td>Jan 23 to Feb 2, 2027. We miss them by a week</td></tr>
+    <tr><td>Key deadlines</td><td>Epic pass prices rise Nov 15, sales end Dec 6. Final 50% house payment due about Dec 8</td></tr>
+  </table></div>
 </section>
 
-<section id="group">
-<h2>The group, and what it actually needs</h2>
-<div class="grp">
-  <div class="col"><h3>Confirmed (invite list from last year)</h3><ul>
-    <li>Erin and Jordan, plus Mom and the nanny, plus two kids (4 and 1)</li>
-    <li>Joe and Lauren, plus two kids (both 2)</li>
-    <li>Omar and Vanessa, plus one baby</li>
-    <li>Zach and Lacey</li>
-    <li>Megan and Matt</li>
-    <li>Leslie and Ashton</li>
-  </ul></div>
-  <div class="col"><h3>Maybe</h3><ul>
-    <li>Josh and Alyssa, plus a newborn (baby due a couple of months before the trip)</li>
-    <li>If they pass, one or two other couples may be invited in their place</li>
-  </ul></div>
+<section id="who">
+  <h2>Who's coming</h2>
+  <p>20 people in the house while Sarah and Ben are here, 14 the rest of the time. Two nannies (Bridget and Will and Ally's) cover the kids all week; Sarah and Ben bring a third. Sarah and Ben are coming for part of the trip around Erin's birthday; see <a href="#sarahben">their options</a>. Fill in the blanks and confirm Will and Ally's kids.</p>
+  <div class="tbl"><table>
+    <tr><th>Family</th><th>Adults</th><th>Kids (age Jan 2027)</th><th>Nanny</th><th>Flights</th><th>Epic pass</th><th>Venmo'd Erin</th></tr>
+    <tr><td><strong>Jordan &amp; Erin</strong> (hosts)</td><td>Jordan, Erin</td><td>Jackson (4), Marley (1)</td><td>Bridget</td><td class="fill">—</td><td class="fill">—</td><td>Hosts</td></tr>
+    <tr><td><strong>Sarah &amp; Ben</strong></td><td>Sarah, Ben</td><td>Bennet (4), Asher (2), Leia (6 mo)</td><td>Yes (name?)</td><td class="fill">—</td><td class="fill">—</td><td class="fill">—</td></tr>
+    <tr><td><strong>Will &amp; Ally</strong></td><td>Will, Ally</td><td>2 kids (confirm names, ages)</td><td>Yes (name?)</td><td class="fill">—</td><td class="fill">—</td><td class="fill">—</td></tr>
+    <tr><td><strong>Omar &amp; Vanessa</strong></td><td>Omar, Vanessa</td><td>Baby (confirm name, age)</td><td>None</td><td class="fill">—</td><td class="fill">—</td><td class="fill">—</td></tr>
+    <tr><td><strong>Zach &amp; Lacey</strong></td><td>Zach, Lacey</td><td>None</td><td>None</td><td class="fill">—</td><td class="fill">—</td><td class="fill">—</td></tr>
+  </table></div>
+  <p class="note">Joe &amp; Lauren, Megan &amp; Matt, Leslie &amp; Ashton, and Josh &amp; Alyssa opted out of the house and may come for 2 to 3 days staying separately. Add them if they commit. Group contacts so far: Lacey Iskra, Vanessa Pozos, Zach Heibert, Ally (404-345-0758).</p>
+</section>
+
+<section id="house">
+  <h2>The house</h2>
+  <p>Snowflake Chateau sits at the end of a cul-de-sac directly on the Lower Sawmill run, next to Grand Timber Lodge (75 Snowflake Dr) between Peaks 8 and 9. Managed by <a href="https://www.brecklodgingco.com/vrp/unit/snowflake-chateau">Breckenridge Lodging Co.</a>, 970-236-6334. The street address arrives with the check-in email; paste it here when it does.</p>
+
+  <h3>Getting around</h3>
+  <div class="tbl"><table>
+    <tr><th>Destination</th><th>From the house</th></tr>
+    <tr><td>Beaver Run SuperChair (Peak 9)</td><td>0.3 mi, 5 min walk. Ski-out is 25 yards from the patio</td></tr>
+    <tr><td>Peak 8 SuperConnect lift</td><td>0.2 mi, 3 min walk</td></tr>
+    <tr><td>Snowflake Chairlift</td><td>0.4 mi, 7 min walk</td></tr>
+    <tr><td>Main Street</td><td>0.8 mi, 15 min walk or 3 min drive. With kids in snow, drive or bus</td></tr>
+    <tr><td>Free Ride bus (Gray route)</td><td>Stops at Snowflake Lift and Grand Timber Lodge. Runs to the gondola and around town. Use the My Free Ride app</td></tr>
+    <tr><td>City Market grocery</td><td>400 N Park Ave, about 5 min drive</td></tr>
+    <tr><td>St. Anthony Summit Hospital</td><td>340 Peak One Dr, Frisco. About 20 min</td></tr>
+  </table></div>
+
+  <div class="cols">
+    <div>
+      <h3>Ski out</h3>
+      <p>From the patio onto the run, turn right. This stretch is two-way, so watch for skiers coming back. Ski about 25 yards, cut left through a few wide trees, and you're at the Beaver Run base.</p>
+    </div>
+    <div>
+      <h3>Ski in</h3>
+      <p>From C-Chair on Peak 9, take Lower Sawmill toward Beaver Run. Where it flattens, pass the Snowflake run (do not take it) and take the next run on the left marked "ski back to Grand Timber." It ends at the house's locker room. The ski-back is blue terrain: fine for adults, not for the 4-year-olds.</p>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h3>Amenities</h3>
+      <ul>
+        <li>Private hot tub and dry sauna in the lower-level locker room, with ski storage and a full bath</li>
+        <li>Chef's kitchen: large island, two dishwashers, two full-size fridges, kids' dishes, coffee maker, starter supplies</li>
+        <li>Three living areas, three gas fireplaces, large lower-level bar</li>
+        <li>Two laundry rooms, one with boot warmers</li>
+        <li>Deck with grill, propane fire table, views of Baldy</li>
+        <li>Fans and humidifiers in rooms, room-darkening shades, smart TVs, Wi-Fi, two desks</li>
+        <li>Baby gear on site: one pack-n-play (no sheet) and one high chair. No baby gates listed</li>
+        <li>Heated 2-car garage plus heated driveway. 6-car limit, no street parking</li>
+        <li>After booking, the manager sends discount links for ski rentals, airport shuttles and oxygen rental</li>
+      </ul>
+    </div>
+    <div>
+      <h3>House rules</h3>
+      <ul>
+        <li>Listed max is 16 guests. Kids in pack-n-plays don't count toward it, so 10 adults plus 3 nannies is fine</li>
+        <li>No pets. Renter must be 25+</li>
+        <li>4WD/AWD with snow tires required by the manager</li>
+        <li>Strict Breckenridge short-term rental rules; Good Neighbor Guidelines posted in the house</li>
+        <li>Hot tub is serviced weekly, so expect one contractor visit</li>
+        <li>Check-out: optionally start the dishwasher, nothing else</li>
+      </ul>
+      <h3>Payment and cancellation</h3>
+      <ul>
+        <li>50% at booking, 50% due 30 days before arrival (about Dec 8). 4.5% admin fee on top</li>
+        <li>Refund: 100% until 60 days out (Nov 8), 50% from 31 to 60 days, none inside 30 days. No weather exceptions</li>
+        <li>Damage deposit and cleaning fee aren't on the public listing; confirm from the reservation</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note"><strong>What past guests say:</strong> space, cleanliness, the sauna and hot tub, the two fridges and the responsive house manager (Jesse) get consistent praise. A March 2026 group of 16 said several things needed repair. One guest said it isn't truly ski-in/out for young beginners because of the narrow exit and blue ski-back. Erin's family has stayed here before and rates it the best of 4 or 5 Breck houses.</p>
+</section>
+
+<section id="sleep">
+  <h2>Sleeping plan</h2>
+  <p>Five couple beds (4 kings, 1 queen) for five couples, so every couple gets a real bed and a door. Kids under 2 with their parents, big kids in the bunk room with a nanny. Draft only; change it as you like. The listing's summary and description disagree on bunk count, so confirm with the manager.</p>
+  <div class="tbl"><table>
+    <tr><th>Room</th><th>Level</th><th>Beds</th><th>Bath</th><th>Who sleeps here</th><th>Gear needed</th></tr>
+    <tr><td><strong>Bedroom 1</strong> (primary)</td><td>Main</td><td>King</td><td>En-suite, soaking tub, steam shower, fireplace</td><td>Jordan, Erin, Marley (1)</td><td>House pack-n-play + sheet</td></tr>
+    <tr><td><strong>Bedroom 2</strong></td><td>Main</td><td>King</td><td>En-suite</td><td>Will, Ally, their 2 kids</td><td>1 to 2 pack-n-plays or toddler cots</td></tr>
+    <tr><td><strong>Bedroom 4</strong></td><td>Lower</td><td>King</td><td>Jack-and-Jill with bunk room</td><td>Sarah, Ben, Leia (6 mo)</td><td>1 pack-n-play or bassinet</td></tr>
+    <tr><td><strong>Bedroom 5</strong> (bunk room)</td><td>Lower</td><td>2 twin-over-twin bunks (4 beds)</td><td>Shared with Bedroom 4</td><td>Bennet (4) and Asher (2) on bottom bunks, Sarah and Ben's nanny on top. Jackson (4) can join for a "big kid room"</td><td>Bed rail or pack-n-play for Asher; sound machine</td></tr>
+    <tr><td><strong>Bedroom 6</strong></td><td>Lower</td><td>King</td><td>En-suite</td><td>Omar, Vanessa, baby</td><td>1 pack-n-play or bassinet</td></tr>
+    <tr><td><strong>Bedroom 3</strong></td><td>Upper</td><td>Queen</td><td>En-suite</td><td>Zach and Lacey (quietest level)</td><td>None</td></tr>
+    <tr><td><strong>Loft</strong></td><td>Upper</td><td>Twin daybeds (listed as 4 singles)</td><td>Bedroom 3 bath or main half bath</td><td>Bridget + Jackson (4), or Bridget alone if Jackson takes the bunk room</td><td>None</td></tr>
+    <tr><td><strong>Bonus bunk</strong></td><td>Lower, off the bar</td><td>1 twin-over-twin</td><td>Locker room full bath</td><td>Will and Ally's nanny</td><td>None</td></tr>
+  </table></div>
+  <div class="cols">
+    <div>
+      <h3>Why this layout</h3>
+      <ul>
+        <li>Lower level is the kid wing: Sarah and Ben next to their two older kids through the Jack-and-Jill bath, Omar and Vanessa's baby down the hall</li>
+        <li>Main level puts the two families with 1-year-olds nearest the kitchen for early mornings</li>
+        <li>Upper level stays quiet: Zach and Lacey plus Bridget and Jackson in the loft</li>
+        <li>The bonus bunk is off the bar, so whoever sleeps there is okay with evening noise, or the bar closes at 10</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Gear to rent for the house</h3>
+      <p>4 to 5 pack-n-plays (plus the house's one), 2 or 3 extra-wide baby gates for the stairs, 2 extra high chairs, 1 or 2 SlumberPods for kids sharing rooms. Providers and prices in the Kids section.</p>
+    </div>
+  </div>
+</section>
+
+<section id="travel">
+  <h2>Getting there</h2>
+  <p>Fly into Denver (DEN). It's about 104 miles and 2 hours to the house in good conditions, longer in snow or traffic. Thursday arrival and Friday-morning departure both dodge the worst I-70 traffic.</p>
+  <div class="cols">
+    <div><h3>Arrival, Thu Jan 7</h3><p>Land by early afternoon so the drive is in daylight. Check-in is 4:00 pm. Someone arrives first to meet the grocery order.</p></div>
+    <div><h3>Departure, Fri Jan 15</h3><p>Friday before MLK weekend. Eastbound (our direction) is the lighter side, but leave right at the 10:00 am checkout and don't book flights before about 2:00 pm.</p></div>
+  </div>
+  <h3>Shuttle vs rental car</h3>
+  <div class="tbl"><table>
+    <tr><th>Option</th><th>Cost</th><th>Notes</th></tr>
+    <tr><td><a href="https://www.epicmountainexpress.com/mountain">Epic Mountain Express</a> private 10-passenger van</td><td>About $549 to $1,049 each way</td><td>Best for families with car seats. Two vans per direction keeps families together. DEN counter is Level 5, west side, near carousel 18. Book 48+ hours ahead. Jan 14 to 18 is an MLK promo blackout, so no discount codes on the return</td></tr>
+    <tr><td>Epic Mountain Express shared shuttle</td><td>About $59 to $129 per person each way</td><td>Epic pass holders save 20%, and it applies to everyone on the reservation</td></tr>
+    <tr><td>Peak 1 Express, Summit Express</td><td>From about $44 per seat</td><td>Alternatives if EME is sold out</td></tr>
+    <tr><td>AWD/4WD rental car</td><td>Varies</td><td>Needed for town, City Market, the rec center and Frisco. 6-car limit at the house. Check tires at the counter: M+S or snowflake rated, 3/16" tread</td></tr>
+  </table></div>
+  <p><strong>Suggested mix:</strong> two private vans for the arrival wave, plus 2 or 3 AWD rentals so there are cars for daycare drop-offs, groceries and the rec center.</p>
+  <p><strong>Car seats:</strong> airlines check them free, and bringing your own is the safest bet. Baby's Away and BabyQuip rent them locally. EME's car seat policy isn't published; call 970-754-7433.</p>
+  <p><strong>Colorado traction law:</strong> in effect on I-70 from Sept 1 to May 31. Tires must be M+S or mountain-snowflake rated with 3/16" tread, or carry chains or an AutoSock. 2WD cars can no longer comply on tires alone. Fines start at $50 plus surcharge and reach $500+ if you block a lane. Check <a href="https://cotrip.org">COtrip.org</a> before every drive.</p>
+  <p class="note">Eagle (EGE) is closer to Vail than Breck and sits across Vail Pass. Not worth it for this group.</p>
+</section>
+
+<section id="kids">
+  <h2>Kids: ski school and gear</h2>
+  <p>Our two nannies cover the kids all week, and Sarah and Ben bring their own, so no daycare or outside sitters are planned. Ski school for the 4-year-olds is at Beaver Run, a 5 minute walk. Book it now.</p>
+  <h3>Ski school (Jackson and Bennet, both 4)</h3>
+  <ul>
+    <li><a href="https://www.breckenridge.com/plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx">Breckenridge Ski &amp; Ride School</a>, Child Ages 3 to 4 group lesson, half-day AM or full-day, starts 9:00 am</li>
+    <li>Meet at the Beaver Run Children's Facility, one level below Beaver Run Plaza on the parking-lot level</li>
+    <li>Budget at least $310 per child per half day (2024 pricing; 2026-27 shows in the booking tool). 20% off multiple days</li>
+    <li>Kids 4 and under ski free, no lift ticket needed. The 2-year-olds are too young for group lessons</li>
+    <li>Pack: helmet, goggles, waterproof mittens, snow pants and jacket, neck gaiter, ski socks, sunscreen, a snack. Label everything</li>
+    <li>Contact: 970-496-3272, lrn2ski@vailresorts.com</li>
+  </ul>
+  <h3>Backup childcare, only if a nanny is sick or we want all adults out at once</h3>
+  <ul>
+    <li>Beaver Run Child Care (970-547-5470), ages 6 months to 4, 8:30 am to 3:30 pm, about $235 to $275 per day. 48-hour cancellation. <a href="https://www.breckenridge.com/plan-your-trip/childcare.aspx">Register in advance</a> if we want the option</li>
+    <li>In-home sitters: <a href="https://www.thesitteragency.com/summit-county">The Sitter Agency</a> 970-333-1338, about $40/hr plus $2/hr per extra kid, 4-hour minimum; <a href="https://www.breckenridgenannies.com/nannies-sitters">Breckenridge Nannies</a> $32 to $38/hr plus fees, 72-hour cancellation</li>
+  </ul>
+  <h3>Baby gear rental, delivered to the house</h3>
+  <div class="tbl"><table>
+    <tr><th>Provider</th><th>Sample prices</th><th>Notes</th></tr>
+    <tr><td><a href="https://babysaway.com/locations/Breckenridge-Keystone-Copper-Summit-County">Baby's Away Summit County</a></td><td>Pack-n-play $7/day or $42/week with sheet; delivery $35 to $45; $40 minimum</td><td>Cribs, high chairs, strollers, car seats, toys</td></tr>
+    <tr><td><a href="https://www.mountaintot.com/">MountainTot</a>, 970-368-4447</td><td>Pack-n-play from $14/day, wood crib from $24/day, extra-wide gate from $6/day, humidifier from $4/day</td><td>Local Breck service; gates, hiking backpacks, strollers</td></tr>
+    <tr><td><a href="https://www.babyquip.com/h/breckenridge">BabyQuip</a></td><td>Crib from $15/day, playard from $8/day, SlumberPod $7 to $12/day</td><td>Independent local providers</td></tr>
+  </table></div>
+  <p>One person places a single house order: 5 pack-n-plays, 3 gates, 2 high chairs, 2 SlumberPods, sleds. Roughly $250 to $400 for the week at Baby's Away rates, split among families with kids.</p>
+</section>
+
+<section id="passes">
+  <h2>Lift passes and rentals</h2>
+  <p><strong>Buy before November 15.</strong> Anyone skiing 4 or more days should get an Epic Local Pass; it pays for itself in about 4 days against window prices and unlocks 20% off lessons, rentals, on-mountain food and the EME shuttle.</p>
+  <div class="tbl"><table>
+    <tr><th>2026-27 product</th><th>Adult 31+</th><th>Ages 13 to 30</th><th>Child 5 to 12</th><th>Notes</th></tr>
+    <tr><td>Epic Pass</td><td>$1,169</td><td>$929</td><td>$599</td><td>Unlimited, no blackouts</td></tr>
+    <tr><td>Epic Local Pass</td><td>$869</td><td>$689</td><td>$455</td><td>Unlimited Breck except peak dates. MLK blackout starts Jan 16, the day after we leave. Confirm on epicpass.com</td></tr>
+    <tr><td>Epic Day Pass</td><td colspan="3">$46 to $97 per day</td><td>1 to 7 days, buy before Dec 6</td></tr>
+    <tr><td>Breck window ticket</td><td>$234 weekday, $281 weekend</td><td></td><td>$152 to $183</td><td>2025-26 figures; 2026-27 not posted</td></tr>
+  </table></div>
+  <p>Kids 4 and under ski free. Pass prices go up Nov 15 and all Epic sales end Dec 6, 2026.</p>
+  <h3>Ski and board rentals delivered to the house</h3>
+  <ul>
+    <li><a href="https://www.yelp.com/biz/black-tie-ski-rentals-breckenridge-breckenridge">Black Tie Ski Rentals Breckenridge</a>, 970-547-4416: fits you at the house, free delivery and pickup, about $62 to $71/day adult performance, $47 to $56/day junior, 2-day minimum</li>
+    <li><a href="https://www.breckenridge.com/plan-your-trip/rentals/rental-delivery.aspx">Breck Sports / Epic Mountain Rentals</a>: free delivery, up to 20% off booking online 48+ hours ahead</li>
+    <li>Ski Butlers and Base Mountain Sports also deliver</li>
+    <li>The house manager sends partner discount links after booking; check those first</li>
+  </ul>
+</section>
+
+<section id="days">
+  <h2>Day by day</h2>
+  <p>Seven ski days with a slow first afternoon for altitude. The kid column is a default; families swap in and out. Edit freely.</p>
+  <div class="tbl"><table>
+    <tr><th>Day</th><th>Adults</th><th>Kids</th><th>Evening</th></tr>
+    <tr><td><strong>Thu Jan 7</strong></td><td>Fly DEN, shuttle up, check in 4 pm. Easy afternoon, hydrate</td><td>Settle in, early bed</td><td>Grocery order arrives; easy dinner at the house</td></tr>
+    <tr><td><strong>Fri Jan 8</strong></td><td>First ski day. Half day to acclimate, lifts from Beaver Run</td><td>Nannies at the house; sled on the run in the afternoon</td><td>Group dinner at the house, hot tub</td></tr>
+    <tr><td><strong>Sat Jan 9</strong></td><td>Full ski day</td><td>Jackson and Bennet ski school 9 am. Younger kids with the nannies</td><td>Family dinner at the house</td></tr>
+    <tr><td><strong>Sun Jan 10</strong> <span class="pill">Erin's birthday</span></td><td>Ski day or slow morning</td><td>Ski school day 2. Nannies have the kids from 5:30 pm</td><td>Adults-only birthday dinner in town. Book now</td></tr>
+    <tr><td><strong>Mon Jan 11</strong></td><td>Full ski day</td><td>Kids' day in town: rec center pool, skating or gondola ride</td><td>Private chef night at the house (optional)</td></tr>
+    <tr><td><strong>Tue Jan 12</strong></td><td>Ski or rest day</td><td>Library story time Tue 10:30 am (confirm), Frisco sledding hill</td><td>Casual dinner in town or house</td></tr>
+    <tr><td><strong>Wed Jan 13</strong></td><td>Full ski day</td><td>Nannies</td><td>Sleigh-ride dinner for anyone interested (optional)</td></tr>
+    <tr><td><strong>Thu Jan 14</strong></td><td>Last ski day, pack in the evening</td><td>Last sled runs, pack</td><td>Leftovers night, clean out the fridges</td></tr>
+    <tr><td><strong>Fri Jan 15</strong></td><td>Check out 10 am, shuttle to DEN, flights after 2 pm</td><td></td><td></td></tr>
+  </table></div>
+</section>
+
+<section id="food">
+  <h2>Food</h2>
+  <p>Stock the house before arrival and eat most dinners in. With eight small kids, restaurants are for lunch and the birthday night.</p>
+  <div class="cols">
+    <div>
+      <h3>Groceries</h3>
+      <ul>
+        <li>City Market (Kroger), 400 N Park Ave, 970-453-0818, 6 am to 11 pm. The only big store in town; pickup and delivery available</li>
+        <li>Whole Foods, 261 Lusher Ct, Frisco, 970-668-9400</li>
+        <li>Pre-arrival stocking: Instacart from City Market, or <a href="https://www.breckenridgelodging.com/grocery-delivery">Breckenridge Grocery Express</a> (970-445-8658) shops and puts it away before check-in with 24 hours' notice. <a href="https://www.slopesidegetaways.com/concierge">Peak to Peak Concierge</a> (970-717-0155) also stocks and books private chefs</li>
+        <li>One family owns the arrival-day order: diapers, wipes, formula, milk, breakfast, snacks, water, coffee, first-night dinner. Timed for 4 pm</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Dinner sign-up</h3>
+      <div class="tbl"><table style="min-width:0">
+        <tr><th>Night</th><th>Cook</th><th>Meal</th></tr>
+        <tr><td>Thu Jan 7</td><td>Hosts</td><td>Easy first night</td></tr>
+        <tr><td>Fri Jan 8</td><td class="fill">—</td><td class="fill">—</td></tr>
+        <tr><td>Sat Jan 9</td><td class="fill">—</td><td class="fill">—</td></tr>
+        <tr><td>Mon Jan 11</td><td>Private chef?</td><td class="fill">—</td></tr>
+        <tr><td>Tue Jan 12</td><td class="fill">—</td><td class="fill">—</td></tr>
+        <tr><td>Wed Jan 13</td><td class="fill">—</td><td class="fill">—</td></tr>
+        <tr><td>Thu Jan 14</td><td>Everyone</td><td>Leftovers</td></tr>
+      </table></div>
+    </div>
+  </div>
+  <h3>Erin's birthday dinner, Sun Jan 10, adults only (10 to 12 people)</h3>
+  <div class="tbl"><table>
+    <tr><th>Restaurant</th><th>Why</th><th>Reserve</th></tr>
+    <tr><td><a href="https://www.tripadvisor.com/Restaurant_Review-g33327-d381249-Reviews-Hearthstone_Restaurant-Breckenridge_Colorado.html">Hearthstone</a>, 130 S Ridge St, 970-453-1148</td><td>The town's classic celebration spot, Victorian house, entrees $60 to $90</td><td>Call now for a party this size</td></tr>
+    <tr><td>Aurum, 209 S Ridge St, 970-771-3943</td><td>Lively room, strong cocktails</td><td></td></tr>
+    <tr><td>Briar Rose Chophouse, 109 Lincoln Ave, 970-453-9948</td><td>Steakhouse with family-style sides, good for groups</td><td></td></tr>
+    <tr><td>Twist, 200 S Ridge St, 970-547-7100</td><td>Chef-owned, smaller room</td><td></td></tr>
+  </table></div>
+  <p><strong>Family-friendly:</strong> Downstairs at Eric's (111 S Main, arcade), Tin Plate Pizza (no reservations), Giampietro Pizzeria, Breckenridge Tap House (105 N Main), Blue River Bistro (305 N Main).</p>
+</section>
+
+<section id="offmtn">
+  <h2>Off-mountain</h2>
+  <p>Best bets for the under-5s: the rec center pool on a cold afternoon, the free sledding hill in Frisco, skating, and the gondola ride up to Peak 8.</p>
+  <div class="tbl"><table>
+    <tr><th>Activity</th><th>Details</th><th>Kids</th></tr>
+    <tr><td><a href="https://www.breckenridgerecreation.com/rates/locations/breckenridge-recreation-center">Breckenridge Recreation Center</a>, 880 Airport Rd</td><td>$20 adult, $10 ages 3 to 17, under 3 free. Leisure pool with slides, lazy river, warm family tub, climbing wall</td><td>All ages</td></tr>
+    <tr><td><a href="https://www.breckenridgerecreation.com/programs/fun-things-to-do/breckenridge-ice-skating">Stephen C. West Ice Arena</a>, 189 Boreas Pass Rd</td><td>$13 adult, $10 youth, skate rental $7. Indoor and outdoor rinks</td><td>3+ with support</td></tr>
+    <tr><td><a href="https://www.townoffrisco.com/things-to-do/frisco-adventure-park/tubing/">Frisco Adventure Park tubing</a>, 621 Recreation Way</td><td>$44/person/hour Jan 7 to 14, $55 on Jan 15. 36" minimum height. Reservations required. Free sledding hill next door</td><td>4-year-olds maybe; sledding for all</td></tr>
+    <tr><td>BreckConnect Gondola to Peak 8</td><td>Free. Views and the base-area scene</td><td>All ages</td></tr>
+    <tr><td>Gold Runner Coaster, Peak 8</td><td>About $29 to $38 per ride. Passengers 38"+ with a driver 16+</td><td>4-year-olds</td></tr>
+    <tr><td><a href="https://breckstables.com/peak-9-sleigh-rides/">Breckenridge Stables sleigh dinner</a>, Peak 9</td><td>About $125 adult, $90 ages 4 to 12, under 4 free (2025-26 prices)</td><td>Adults and big kids</td></tr>
+    <tr><td><a href="https://dinnersleighrides.com/colorado-sleigh-rides/dining/">Two Below Zero dinner sleigh</a>, Frisco</td><td>$119 adult, $89 ages 4 to 12, under 4 free, 2.5 hours</td><td>Adults</td></tr>
+    <tr><td>Summit County Library South Branch, 103 S Harris St</td><td>Preschool story time reported Tue 10:30 am (confirm), kids' area</td><td>Toddlers</td></tr>
+  </table></div>
+  <p class="note">The International Snow Sculpture Championships run Jan 23 to Feb 2, 2027, the week after we leave.</p>
+</section>
+
+<section id="pack">
+  <h2>Packing lists</h2>
+  <p><strong>Rent locally instead of flying with it:</strong> skis, boards, kids' skis and helmets, cribs, pack-n-plays, high chairs, gates, strollers, sleds, hiking backpacks, car seats. The house has humidifiers and fans.</p>
+  <div class="cols">
+    <div>
+      <h3>Adults</h3>
+      <ul>
+        <li>Waterproof shell jacket and pants; 2 sets of base layers; fleece or light puffy</li>
+        <li>Ski socks (3 to 4 pairs), helmet, goggles plus low-light lens, neck gaiter</li>
+        <li>Waterproof gloves or mittens plus liners; hand and toe warmers</li>
+        <li>SPF 30+ sunscreen, SPF lip balm, sunglasses, water bottle, small backpack</li>
+        <li>Boots if you own them; warm winter boots with traction for town</li>
+        <li>Swimsuit for hot tub and sauna; Epic pass on your phone; birthday-dinner outfit</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Toddlers and preschoolers</h3>
+      <ul>
+        <li>One-piece or bib snowsuit plus waterproof jacket; 2 sets of base layers; fleece</li>
+        <li>Waterproof mittens with long cuffs (2 pairs), warm hat, neck gaiter, snow boots</li>
+        <li>Kid goggles or sunglasses, mineral sunscreen</li>
+        <li>Daycare and ski school days: nut-free lunch, 2 snacks, water bottle, 8+ diapers, wipes, 2 changes of clothes</li>
+        <li>Swimsuit and swim diapers for the pool; comfort items; favorite books</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Babies</h3>
+      <ul>
+        <li>Fleece bunting or snowsuit; footed fleece pajamas and sleep sacks (rooms run cool and dry)</li>
+        <li>Hats and mittens; baby sunscreen and sun hat</li>
+        <li>Pacifiers or bottles for the drive (ear pressure)</li>
+        <li>Infant carrier for town; white noise machine</li>
+        <li>Saline drops and nasal aspirator; infant pain reliever as your pediatrician advises</li>
+        <li>Formula and favorite foods for the first 24 hours; pack-n-play sheets</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Travel gear</h3>
+      <ul>
+        <li>Car seats (or rent), portable sound machines, blackout travel shades</li>
+        <li>Monitor, night lights, outlet covers</li>
+        <li>Small first-aid kit, labels for all gear</li>
+        <li>Venmo set up for the final split</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="health">
+  <h2>Altitude, weather, medical</h2>
+  <p>The house sits at about 9,600 ft. Take the first afternoon easy, drink water all day, go light on alcohol the first night, and run the humidifiers. Each family with a baby under 2 should mention the altitude at their next pediatrician visit.</p>
+  <div class="cols">
+    <div>
+      <h3>Altitude with kids</h3>
+      <ul>
+        <li>Kids get altitude sickness too, but <a href="https://www.childrenscolorado.org/just-ask-childrens/articles/altitude-sickness/">Children's Hospital Colorado</a> calls it something to be aware of, not to fear. A kid with a cold or ear infection is more likely to have symptoms</li>
+        <li>Babies and toddlers show it as unexplained fussiness, poor sleep, poor feeding, vomiting or unusual tiredness. Altitude sickness does not cause fever</li>
+        <li>If a child is unwell at altitude, assume altitude until proven otherwise and get care or go lower</li>
+        <li>Diamox isn't usually prescribed for healthy kids; a pulse oximeter isn't recommended unless your doctor gives you one</li>
+        <li>The manager offers 10% off oxygen rental if anyone needs it</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Weather, early to mid January</h3>
+      <ul>
+        <li>Highs in town low 20s to about 30°F, lows near 0°F. Mornings below zero are common; wind chill on lifts is colder</li>
+        <li>About 10 inches of snow in town over 17 snow days; far more on the upper mountain</li>
+        <li>Daylight roughly 7:20 am to 4:50 pm</li>
+        <li>UV is intense at altitude even when it's cold. Sunscreen every morning</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Medical</h3>
+  <div class="tbl"><table>
+    <tr><th>Need</th><th>Where</th></tr>
+    <tr><td>Emergency</td><td><a href="https://www.mountain.commonspirit.org/location/st-anthony-summit-hospital">St. Anthony Summit Hospital</a>, 340 Peak One Dr, Frisco, 970-668-3300. 24/7 ER, Level III trauma, pediatric-ready. About 20 min</td></tr>
+    <tr><td>On-mountain injury</td><td>CommonSpirit emergency clinic at the Breckenridge base</td></tr>
+    <tr><td>Urgent care</td><td>Summit Community Care Clinic, 360 Peak One Dr, Frisco</td></tr>
+    <tr><td>House call</td><td>High Altitude Mobile Medical, Breckenridge</td></tr>
+    <tr><td>Pediatrician</td><td>Christine Ebert-Santos, MD, Frisco</td></tr>
+  </table></div>
+  <p class="note">Per the hospital: any baby under 2 with a fever, trouble breathing, a head injury or chest pain goes to the ER.</p>
+</section>
+
+<section id="costs">
+  <h2>Costs and splits</h2>
+  <p>The house runs about $4,770 per family across five families, down from the $5,965 quoted for four. Erin collects via Venmo and refunds the difference as people are added.</p>
+  <div class="tbl"><table>
+    <tr><th>Item</th><th>Total</th><th>Per family (5)</th><th>Notes</th></tr>
+    <tr><td>House, 8 nights</td><td>About $23,860</td><td>$4,772</td><td>After 20% discount, before admin fee and tax. Confirm the final invoice. See <a href="#sarahben">Sarah and Ben</a> for partial-stay splits</td></tr>
+    <tr><td>Admin fee 4.5%</td><td>About $1,074</td><td>$215</td><td></td></tr>
+    <tr><td>Tax and cleaning</td><td>Confirm</td><td></td><td>Not on the public listing</td></tr>
+    <tr><td>Baby gear rental</td><td>$250 to $400</td><td>Split among families with kids</td><td></td></tr>
+    <tr><td>Shared groceries</td><td>Running tally</td><td>Even split</td><td>Keep receipts in one place</td></tr>
+    <tr><td>Private chef night (optional)</td><td>Quote</td><td>Split among those eating</td><td></td></tr>
+  </table></div>
+  <p><strong>Each family pays its own:</strong> flights, shuttle or rental car, Epic passes, ski rentals, ski school, daycare, restaurant meals. Final true-up happens the last night.</p>
+</section>
+
+<section id="sarahben">
+  <h2>Sarah and Ben: partial-stay options</h2>
+  <p>Sarah and Ben are joining for part of the week around Erin's birthday on Sunday January 10. Pick a scenario; the cost columns show a fair pro-rated share and what it does to everyone else's number. The house is about $2,983 per night, so a family's one-night share at five ways is $597.</p>
+  <div class="tbl"><table>
+    <tr><th>Scenario</th><th>Arrive</th><th>Leave</th><th>Nights</th><th>Sarah &amp; Ben pay</th><th>Other 4 families pay each</th><th>Notes</th></tr>
+    <tr><td><strong>A.</strong> Birthday weekend</td><td>Sat Jan 9</td><td>Tue Jan 12</td><td>3</td><td>$1,790</td><td>$5,518</td><td>Shortest. Saturday morning westbound I-70 is the worst drive of the week; land in Denver early or fly Friday night</td></tr>
+    <tr><td><strong>B.</strong> Birthday through Thursday</td><td>Sun Jan 10</td><td>Thu Jan 14</td><td>4</td><td>$2,386</td><td>$5,369</td><td>Arrive the afternoon of the birthday, straight into dinner. Sunday westbound is light. Four ski days, two ski-school days for Bennet</td></tr>
+    <tr><td><strong>C.</strong> Long weekend plus</td><td>Fri Jan 8</td><td>Tue Jan 12</td><td>4</td><td>$2,386</td><td>$5,369</td><td>Friday afternoon westbound traffic is heavy; land by noon</td></tr>
+    <tr><td><strong>D.</strong> Most of the week</td><td>Sat Jan 9</td><td>Thu Jan 14</td><td>5</td><td>$2,983</td><td>$5,219</td><td>Best value per night for the drive and the flights</td></tr>
+    <tr><td><strong>E.</strong> Full trip</td><td>Thu Jan 7</td><td>Fri Jan 15</td><td>8</td><td>$4,772</td><td>$4,772</td><td>Even five-way split</td></tr>
+  </table></div>
+  <p class="note">Pro-rated math: nights x $597. The remaining house cost splits four ways. All figures before the 4.5% admin fee and tax.</p>
+
+  <h3>Alternative: book their own place next door</h3>
+  <p><a href="https://www.vrbo.com/5007473">Grand Timber Lodge</a> (75 Snowflake Dr) is the building our ski-back trail is named for, a 2 to 3 minute walk from the house. A 2-bedroom, 2-bath unit that sleeps 8 (king, queen, double, sofa bed) is listed at $528 per night all fees included for Jan 10 to 15, 2027. The resort has indoor and outdoor pools, hot tubs, a sauna and its own shuttle. Everyone eats, skis and hangs out at Snowflake Chateau; they just sleep next door.</p>
+  <div class="tbl"><table>
+    <tr><th>Their dates</th><th>Nights</th><th>Grand Timber 2BR (all-in)</th><th>House stays 4 ways, each</th><th>Compared with pro-rating the house</th></tr>
+    <tr><td>Sat Jan 9 to Tue Jan 12</td><td>3</td><td>About $1,584</td><td>$5,965</td><td>Sarah and Ben save about $206; the other four pay $447 more each</td></tr>
+    <tr><td>Sun Jan 10 to Thu Jan 14</td><td>4</td><td>About $2,112</td><td>$5,965</td><td>Sarah and Ben save about $274; the other four pay $596 more each</td></tr>
+    <tr><td>Sun Jan 10 to Fri Jan 15</td><td>5</td><td>$2,638 (listed total)</td><td>$5,965</td><td>Sarah and Ben save about $345; the other four pay $746 more each</td></tr>
+  </table></div>
+  <p class="note">A 3-bedroom unit sleeping 10 was listed on <a href="https://www.redweek.com/resort/P672-grand-timber-lodge/timeshare-rentals">RedWeek</a> at $675 per night for Jan 10 to 17 only (weekly). Vrbo rates move; check the exact nights before deciding.</p>
+  <div class="cols">
+    <div><h3>Own place</h3><p>Their own kitchen and bathrooms, no bunk room, baby sleep schedules don't collide with the bar. Costs the other four families roughly $450 to $750 more each than pro-rating.</p></div>
+    <div><h3>In the house</h3><p>Cheaper for everyone else, everyone under one roof for the birthday, and Bedroom 4 plus the bunk room sit empty otherwise.</p></div>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>Other ways to split it</h3>
+      <ul>
+        <li><strong>Flat fifth share</strong> ($4,772) regardless of nights. Simplest, lowest for everyone else. Only fair if Sarah and Ben are fine subsidizing the empty nights</li>
+        <li><strong>Pro-rated by nights</strong> (the table). Fairest by usage</li>
+        <li><strong>Pro-rated by people-nights.</strong> Their family of 6 is bigger than most, so this charges them more per night. Probably more math than anyone wants</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What changes depending on when they come</h3>
+      <ul>
+        <li><strong>Rooms.</strong> Bedroom 4 and the bunk room stay empty until they arrive, so others can spread out early and consolidate the day before</li>
+        <li><strong>Ski school.</strong> Book Bennet's lessons for the specific days; multi-day still earns 20% off</li>
+        <li><strong>Birthday night.</strong> Their nanny plus Bridget and Will and Ally's nanny cover all eight kids while the adults are at dinner</li>
+        <li><strong>Shuttle.</strong> A mid-week arrival means their own shuttle or rental car. Private EME SUV for 5 runs about $549 to $1,049 each way; shared is about $59 to $129 per person</li>
+      </ul>
+    </div>
+  </div>
+  <p><strong>Sarah and Ben's decision:</strong> <span class="fill">fill in scenario and dates once chosen</span></p>
+</section>
+
+<section id="todo">
+  <h2>To-do tracker</h2>
+  <p>Tick items off as they're done. Checks save in your own browser only, so update the doc too.</p>
+  <div class="cols">
+    <div>
+      <h3>This week</h3>
+      <ul class="todo">
+        <li><input type="checkbox" id="t1"><label for="t1">Get written confirmation from Breck Lodging Co.: dates locked Jan 7 to 15, damage deposit, cleaning fee, bunk count, second pack-n-play, Good Neighbor Guidelines <span class="owner">Erin, Jordan</span></label></li>
+        <li><input type="checkbox" id="t2"><label for="t2">Sarah and Ben pick a scenario: dates, and in the house or Grand Timber <span class="owner">Sarah, Ben</span></label></li>
+        <li><input type="checkbox" id="t3"><label for="t3">Confirm Will and Ally's kids, Omar and Vanessa's baby's age, nanny names <span class="owner">Jordan</span></label></li>
+        <li><input type="checkbox" id="t4"><label for="t4">Buy Epic Local or Epic passes before Nov 15 <span class="owner">Every adult</span></label></li>
+        <li><input type="checkbox" id="t5"><label for="t5">Book Beaver Run ski school for Jackson and Bennet on the days Bennet is here <span class="owner">Erin, Sarah</span></label></li>
+        <li><input type="checkbox" id="t8"><label for="t8">Reserve Hearthstone or Briar Rose for 10 on Sun Jan 10 <span class="owner">Jordan</span></label></li>
+        <li><input type="checkbox" id="t9"><label for="t9">Place one baby gear order: 5 pack-n-plays, 3 gates, 2 high chairs, 2 SlumberPods, sleds <span class="owner">Sarah or Erin</span></label></li>
+      </ul>
+    </div>
+    <div>
+      <h3>By late November</h3>
+      <ul class="todo">
+        <li><input type="checkbox" id="t10"><label for="t10">Book flights into DEN: land by early afternoon Jan 7, depart after 2 pm Jan 15 <span class="owner">Each family</span></label></li>
+        <li><input type="checkbox" id="t11"><label for="t11">Book 2 private EME vans each way, or shared seats <span class="owner">Hosts</span></label></li>
+        <li><input type="checkbox" id="t12"><label for="t12">Reserve 2 or 3 AWD rental cars <span class="owner">Volunteers</span></label></li>
+        <li><input type="checkbox" id="t13"><label for="t13">Reserve delivered ski rentals <span class="owner">Anyone renting</span></label></li>
+        <li><input type="checkbox" id="t14"><label for="t14">Book sleigh-ride dinner and tubing if wanted <span class="owner">Interested adults</span></label></li>
+        <li><input type="checkbox" id="t15"><label for="t15">Venmo Erin the house share <span class="owner">Each family</span></label></li>
+      </ul>
+      <h3>December</h3>
+      <ul class="todo">
+        <li><input type="checkbox" id="t16"><label for="t16">Epic pass sales end Dec 6</label></li>
+        <li><input type="checkbox" id="t17"><label for="t17">Final 50% house payment due about Dec 8 <span class="owner">Hosts</span></label></li>
+        <li><input type="checkbox" id="t18"><label for="t18">Fill the dinner sign-up table <span class="owner">Everyone</span></label></li>
+      </ul>
+      <h3>Week of</h3>
+      <ul class="todo">
+        <li><input type="checkbox" id="t19"><label for="t19">Submit grocery stocking order for Jan 7, 4 pm <span class="owner">Grocery owner</span></label></li>
+        <li><input type="checkbox" id="t20"><label for="t20">Check COtrip.org and the forecast; confirm rental tires are compliant <span class="owner">Drivers</span></label></li>
+        <li><input type="checkbox" id="t21"><label for="t21">Give the nannies a sheet with the house address, hospital and parent phones <span class="owner">Erin</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 </div>
-<div class="kpi">
-  <div><div class="k">Adults, confirmed</div><div class="v">14</div><div class="d">12 in couples + Mom + nanny</div></div>
-  <div><div class="k">Kids, confirmed</div><div class="v">5</div><div class="d">ages 4, 2, 2, 1, and a baby</div></div>
-  <div><div class="k">Heads, confirmed</div><div class="v">19</div><div class="d">22 with Josh, Alyssa and baby</div></div>
-  <div><div class="k">Adult bedrooms needed</div><div class="v">7</div><div class="d">8 with the maybe couple; 9 to hold two spare rooms</div></div>
-</div>
-<div class="callout warn"><p><b>This does not shrink the lodging.</b> Last year's list was 7 couples plus Mom and the nanny. Dropping Josh and Alyssa takes the room count from 8 to 7, but the headcount goes up because of the babies (19 confirmed vs the 16 I searched against last week). That matters in Vail specifically: the Town of Vail caps short-term rental occupancy, and both single houses on the list (184 W Meadow Drive and the 7BR Gore Creek house) are capped at 16. Whether infants count is up to each host, so both need a message before you rely on them. The two-condo Northwoods setup sleeps 26 and has no such problem.</p>
-<p>The other shift is what the kids need. Five children aged 4 and under means cribs, pack-and-plays and a room with a monitor, not a bunk room. A bedroom next to the parents, or a two-bed room for Mom and the nanny with the 4 year old, is worth more than a six-bunk room.</p></div>
-</section>
+</main>
 
-<section id="length">
-<h2>Trip length: 7, 8 or 9 days</h2>
-<p>Travel days book-end the trip, so a 9 day trip is 8 nights and 7 ski days. All three land on Erin's birthday (Sunday January 10) with the group on the mountain.</p>
-<div class="dates">
-  <div class="date rec"><div class="h">9 days: Thu Jan 7 to Fri Jan 15</div>8 nights, 7 ski days. Recommended. Both weekend days are mid-trip. Depart Friday morning ahead of MLK weekend traffic. Every option below is available on these dates.</div>
-  <div class="date"><div class="h">8 days: Fri Jan 8 to Fri Jan 15</div>7 nights, 6 ski days. Arrive Friday, which puts you on I-70 with the Denver weekend crowd (build in an extra hour). Weekly discounts kick in at 7 nights on the Gore Creek house.</div>
-  <div class="date"><div class="h">7 days: Fri Jan 8 to Thu Jan 14</div>6 nights, 5 ski days. Cheapest lodging total but the worst per-night value: no weekly discounts, and the Gore Creek house actually costs more for 6 nights than for 7.</div>
-</div>
-<p class="small">Alternative 7 night option: Thu Jan 7 to Thu Jan 14 avoids the Friday arrival. I priced Jan 8 to 15 for consistency; nightly rates are flat across these midweek January dates so the totals will be within a few hundred dollars.</p>
-</section>
+<footer>
+  <div class="wrap">
+    <p><strong>Sources:</strong>
+      <a href="https://www.brecklodgingco.com/vrp/unit/snowflake-chateau">Snowflake Chateau listing</a> ·
+      <a href="https://www.expedia.com/cn/Breckenridge-Hotels-Step-Out-To-The-Ski-Run.h100401282.Hotel-Information">Expedia listing</a> ·
+      <a href="https://www.breckenridge.com/plan-your-trip/childcare.aspx">Breck childcare</a> ·
+      <a href="https://www.breckenridge.com/plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx">Breck ski school</a> ·
+      <a href="https://www.powder.com/news/ikon-pass-epic-pass-deadlines-winter-26-27">Epic deadlines</a> ·
+      <a href="https://www.zrankings.com/ski-resorts/season-passes">Pass prices</a> ·
+      <a href="https://www.epicmountainexpress.com/mountain">Epic Mountain Express</a> ·
+      <a href="https://www.codot.gov/travel/winter-driving/tractionlaw">CDOT traction law</a> ·
+      <a href="https://www.childrenscolorado.org/just-ask-childrens/articles/altitude-sickness/">Children's Hospital Colorado</a> ·
+      <a href="https://www.greenwoodpediatrics.com/Knowledge-Base/High-Altitude-Infant-Baby-Safety">Greenwood Pediatrics</a> ·
+      <a href="https://www.mountain.commonspirit.org/location/st-anthony-summit-hospital">St. Anthony Summit</a> ·
+      <a href="https://www.weather-atlas.com/en/colorado-usa/breckenridge-weather-january">Weather Atlas</a>
+    </p>
+    <p>Prices marked 2024 or 2025-26 haven't been republished for 2026-27 yet; confirm when booking.</p>
+  </div>
+</footer>
 
-<section id="matrix" class="wide">
-<h2>Full-price options by trip length (above budget, kept for reference)</h2>
-<p class="small">Live Vrbo totals (all fees included) pulled September 9, 2026. Booking.com figures marked <span class="est">est.</span> are pro-rated from last week's verified 8-night rates because Booking.com could not be reached today; treat them as plus or minus 10%. Per group = total divided by 7 confirmed groups (6 couples plus Mom and the nanny). With Josh and Alyssa it divides by 8.</p>
-<div class="tbl matrix"><table>
-<thead><tr><th>Option</th><th>Bedrooms</th><th>Sleeps</th><th>Ski access</th><th>6 nights (7 day trip)</th><th>7 nights (8 day trip)</th><th>8 nights (9 day trip)</th><th>Per group, 8 nights</th><th>Fits 19 heads?</th></tr></thead>
-<tbody>
-<tr><td><b>Northwoods 6BR Chalet + Juniper 311</b><br><span class="small">Golden Peak, two units, one gated building. <a href="https://www.vrbo.com/3771159" target="_blank" rel="noopener">Chalet on Vrbo</a> | <a href="https://www.vrbo.com/3713821" target="_blank" rel="noopener">Juniper 311 on Vrbo</a> | <a href="https://vailrealty.com/property/northwoods/" target="_blank" rel="noopener">Vail Realty direct</a></span></td><td>12 BR / 12 BA</td><td>26</td><td>True ski-in/out, Riva Bahn</td><td class="num">$45,944</td><td class="num">$53,622</td><td class="num">$62,894</td><td class="num">$8,985</td><td>Yes, with room for the maybes and two more couples</td></tr>
-<tr><td><b>Northwoods 6BR Chalet only</b><br><span class="small">Single unit, budget play if Josh and Alyssa pass. <a href="https://www.vrbo.com/3771159" target="_blank" rel="noopener">Vrbo listing</a></span></td><td>6 BR / 6 BA</td><td>14</td><td>True ski-in/out</td><td class="num">$23,249</td><td class="num">$27,214</td><td class="num">$31,528</td><td class="num">$4,504</td><td>No. 14 cap; 7 groups in 6 rooms plus bunk room. Ask host about infants.</td></tr>
-<tr><td><b>184 W Meadow Drive</b><br><span class="small">New 7BR chalet, Vail Village. <a href="https://www.vrbo.com/1829358" target="_blank" rel="noopener">Vrbo</a> | <a href="https://www.airbnb.com/rooms/1167500304241964200" target="_blank" rel="noopener">Airbnb</a></span></td><td>7 BR / 7.5 BA</td><td>16</td><td>Walk 8 to 10 min; ski storage at Gondola One</td><td class="num">$48,304</td><td class="num">$53,632</td><td class="num">$64,377</td><td class="num">$9,197</td><td>Over cap by 3. Must ask host about infants.</td></tr>
-<tr><td><b>7BR Gore Creek House</b><br><span class="small">Vintage single house, W Meadow Dr. <a href="https://www.vrbo.com/618006" target="_blank" rel="noopener">Vrbo</a> | <a href="https://www.airbnb.com/rooms/37243769" target="_blank" rel="noopener">Airbnb</a></span></td><td>7 BR / 5.5 BA</td><td>16</td><td>Walk 10 to 12 min or bus</td><td class="num">$21,116</td><td class="num">$19,726</td><td class="num">$22,482</td><td class="num">$3,212</td><td>Over cap by 3. Town of Vail cap stated in listing.</td></tr>
-<tr><td><b>Arrabelle, Lionshead: 3BR + 3BR + 2BR + 2BR</b><br><span class="small">Four hotel apartments; trio only sleeps 17. <a href="https://www.booking.com/hotel/us/the-arrabelle-at-vail-square.html" target="_blank" rel="noopener">Booking.com</a></span></td><td>10 BR</td><td>21</td><td>Gondola at the door, ski valet</td><td class="num">$56,900 <span class="est">est.</span></td><td class="num">$66,300 <span class="est">est.</span></td><td class="num">$75,806</td><td class="num">$10,829</td><td>Yes with 4 units; 22 heads needs a 5th</td></tr>
-<tr><td><b>Manor Vail Lodge: 3BR + 3BR + 2BR</b><br><span class="small">Across from Golden Peak kids' ski school. <a href="https://www.booking.com/hotel/us/manor-vail-lodge.html" target="_blank" rel="noopener">Booking.com</a> | <a href="https://www.manorvail.com/accommodations/" target="_blank" rel="noopener">Manor Vail direct</a></span></td><td>8 BR</td><td>24</td><td>Walk 2 to 3 min to Riva Bahn</td><td class="num">$49,400 <span class="est">est.</span></td><td class="num">$57,600 <span class="est">est.</span></td><td class="num">$65,883</td><td class="num">$9,412</td><td>Yes</td></tr>
-<tr><td><b>Four Seasons: Blue Sky 4BR + Prima 3BR</b><br><span class="small">Ultra luxury reference. <a href="https://www.booking.com/hotel/us/four-seasons-resort-vail.html" target="_blank" rel="noopener">Booking.com</a> | <a href="https://www.fourseasons.com/vail/villa-residence-rentals/" target="_blank" rel="noopener">Four Seasons direct</a></span></td><td>7 BR</td><td>18</td><td>Walk 5 to 7 min, ski concierge</td><td class="num">$132,900 <span class="est">est.</span></td><td class="num">$155,100 <span class="est">est.</span></td><td class="num">$177,211</td><td class="num">$25,316</td><td>Confirmed yes; 22 heads no</td></tr>
-</tbody></table></div>
-<p class="small">Dropped since last week: Juniper 311A (5BR) repriced from $31,074 to $47,439 for the same 8 nights, so Juniper 311 (6BR, $31,366) replaces it in the combo. Ritz-Carlton 4BR, Slopeside Lodge at Bridge Street, Moraine Villa, Vail Fairway Lodge, Golden Peak Penthouse and 493 Beaver Dam remain eliminated for the reasons in the September 4 version.</p>
-</section>
-
-<section id="pick">
-<h2>Earlier recommendation (before the budget cap)</h2>
-<div class="callout vail"><p><b>Book Northwoods, both 6-bedroom units, for 8 nights (Thu Jan 7 to Fri Jan 15): $62,894, about $8,985 per confirmed group.</b> Listings: <a href="https://www.vrbo.com/3771159" target="_blank" rel="noopener">6BR Chalet (Vrbo)</a>, <a href="https://www.vrbo.com/3713821" target="_blank" rel="noopener">Juniper 311 (Vrbo)</a>, <a href="https://vailrealty.com/property/northwoods/" target="_blank" rel="noopener">Northwoods at Vail Realty</a>. It is the only Vail option that is true ski-in/out, has enough real bedrooms for the confirmed list plus Josh and Alyssa plus two spare couples, sits next to the Golden Peak children's ski school and nursery, and has no occupancy-cap problem with five small kids. If Josh and Alyssa drop and you do not fill the spot, you still want the second unit: it is where Mom, the nanny and the kids sleep, and it keeps a quiet unit for nap and bedtime shifts while the party continues in the Chalet.</p></div>
-<h4>How the rooms would work</h4>
-<ul class="rooms">
-  <li><b>Chalet, upper king with tub:</b> Erin and Jordan, crib for the 1 year old</li>
-  <li><b>Chalet, ground king ensuite:</b> Megan and Matt</li>
-  <li><b>Chalet, twins made to king, balcony:</b> Zach and Lacey</li>
-  <li><b>Chalet, twins made to king, balcony:</b> Leslie and Ashton</li>
-  <li><b>Chalet, TV room with king:</b> Josh and Alyssa with newborn (or a spare couple)</li>
-  <li><b>Chalet, top-floor bunk room (4 twins, 2 baths):</b> spare, or the 4 year old with a monitor</li>
-  <li><b>Juniper 311, master king:</b> Joe and Lauren, two pack-and-plays for the 2 year olds</li>
-  <li><b>Juniper 311, king:</b> Omar and Vanessa, crib for the baby</li>
-  <li><b>Juniper 311, two doubles:</b> Mom and the nanny, two real beds, 4 year old on a cot if preferred</li>
-  <li><b>Juniper 311, two doubles:</b> spare couple</li>
-  <li><b>Juniper 311, full + twin:</b> spare</li>
-  <li><b>Juniper 311, 3-twin bunk room:</b> kids' room later in the week, or spare</li>
-</ul>
-<p class="small">Every confirmed adult group has a door and a king or two real beds; three rooms stay open for the maybes and any replacement couples. The Chalet's 14 person dining table and terrace are the evening room. Cribs and pack-and-plays are not listed as provided at Northwoods; Vail Realty or a rental service (Baby's Away Vail) can supply them, and I would ask when booking.</p>
-<h4>If you want to spend less</h4>
-<p>The <a href="https://www.vrbo.com/618006" target="_blank" rel="noopener">7BR Gore Creek house</a> at $19,726 for 7 nights is a third of the price and has exactly 7 rooms for 7 confirmed groups (king, five queens, one queen plus twin, plus a two-bed bunk room). It requires the host to accept 19 heads over a stated cap of 16, it is a 10 minute walk or a bus to the lifts, and it is dated. Worth one message to the host if the group would rather bank the savings for dinners and a chef night.</p>
-<h4>If you want to spend more</h4>
-<p><a href="https://www.vrbo.com/1829358" target="_blank" rel="noopener">184 W Meadow Drive</a> is the showpiece, but it is capped at 16 and has 6 real couple rooms, so with 19 to 22 heads it only works if the host allows infants and one couple takes the two-double room. The <a href="https://www.booking.com/hotel/us/four-seasons-resort-vail.html" target="_blank" rel="noopener">Four Seasons pairing</a> at $177k is the no-compromise luxury answer for the confirmed list only.</p>
-</section>
-
-<section id="options">
-<h2>All Vail options in detail</h2>
-<p>Full write-ups with amenities, location notes, pros and cons and scores for each of these are in the September 4 version of this page (version history). What changed for the new group:</p>
-<ul class="plain">
-  <li><b>Northwoods Chalet + Juniper 311:</b> moves from a good fit to the clear pick. Nine adult-capable rooms plus two bunk rooms, sleeps 26, both 6BR units verified available for all three trip lengths. Links: <a href="https://www.vrbo.com/3771159" target="_blank" rel="noopener">Chalet</a>, <a href="https://www.vrbo.com/3713821" target="_blank" rel="noopener">Juniper 311</a>, <a href="https://vailrealty.com/property/northwoods/" target="_blank" rel="noopener">Vail Realty direct</a>.</li>
-  <li><b>184 W Meadow Drive:</b> drops from 2nd to 3rd. Cap of 16 and 6 couple rooms were a compromise for 16 people and are a real problem for 19 to 22. <a href="https://www.vrbo.com/1829358" target="_blank" rel="noopener">Vrbo</a>, <a href="https://www.airbnb.com/rooms/1167500304241964200" target="_blank" rel="noopener">Airbnb</a>.</li>
-  <li><b>Arrabelle:</b> now needs four apartments instead of three to clear 19 heads, pushing it to about $75,800 for 8 nights with still no shared living room. Drops to 5th. <a href="https://www.booking.com/hotel/us/the-arrabelle-at-vail-square.html" target="_blank" rel="noopener">Booking.com</a>.</li>
-  <li><b>Manor Vail:</b> holds 4th. Three condos sleep 24, across the street from the kids' ski school, four hot tubs, breakfast included, but bed types are still unverified and there is no group room. <a href="https://www.booking.com/hotel/us/manor-vail-lodge.html" target="_blank" rel="noopener">Booking.com</a>, 800-950-8245.</li>
-  <li><b>7BR Gore Creek House:</b> stays the value pick and now has exactly the right room count, but the 16 cap is a hard question for the host. <a href="https://www.vrbo.com/618006" target="_blank" rel="noopener">Vrbo</a>.</li>
-  <li><b>Northwoods Chalet alone:</b> new entry as the budget fallback if the group ends at 7 rooms and the host will treat the four under-2s as infants. Sleeps 14 on paper.</li>
-</ul>
-</section>
-
-<section id="next">
-<h2>Next steps</h2>
-<ul class="plain">
-  <li>Confirm the group is good with a same-building condo set rather than one house. If yes, book all three Landmark units (210, 206, and the king + 2 doubles unit) for Fri Jan 8 to Fri Jan 15 on the same day so none of them gets taken. Free cancellation runs to Nov 9 or Dec 9 depending on the unit.</li>
-  <li>If the group would rather have one house and can live with fewer adult bedrooms, message the Gore Creek 7BR host (19 people vs a 16 cap) and the Cascade riverfront host before deciding.</li>
-  <li>Set the deposit at $1,000 to $1,500 per couple and a deposit deadline before the earliest free-cancellation date.</li>
-  <li>Give Josh and Alyssa a soft deadline; Landmark 210's bunk room or Vail International 402 covers them if they come.</li>
-  <li>Book Lionshead children's ski school and the Small World nursery as soon as 2026-27 booking opens; January weeks fill early.</li>
-  <li>Everyone buys an Epic 7-Day Pass ($673) or full Epic Pass before prices rise again and sales close in early December.</li>
-</ul>
-</section>
-
-<footer><p>Prices pulled live on Vrbo September 9, 2026 for the exact dates shown. Booking.com figures for 6 and 7 nights are estimates pro-rated from September 4 verified 8-night totals. Nothing booked, no hosts contacted.</p></footer>
-</div>
+<script>
+(function(){
+  var boxes=document.querySelectorAll('.todo input');
+  boxes.forEach(function(b){
+    try{ if(localStorage.getItem('breck27-'+b.id)==='1') b.checked=true; }catch(e){}
+    b.addEventListener('change',function(){
+      try{ localStorage.setItem('breck27-'+b.id, b.checked?'1':'0'); }catch(e){}
+    });
+  });
+})();
+</script>
 </body>
 </html>
